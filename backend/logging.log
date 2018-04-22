@@ -322,3 +322,472 @@ Traceback (most recent call last):
   File "C:\Users\cbaldwin\Documents\teamTreehouseProjects\Python\project_11\backend\pugorugh\views.py", line 43, in get_object
     except ObjectDoesNotExist:
 NameError: name 'ObjectDoesNotExist' is not defined
+ERROR:django.request:Internal Server Error: /api/user/preferences/
+Traceback (most recent call last):
+  File "C:\Users\cbaldwin\Documents\teamTreehouseProjects\Python\project_11\p_11_venv\lib\site-packages\django\core\handlers\base.py", line 149, in get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\cbaldwin\Documents\teamTreehouseProjects\Python\project_11\p_11_venv\lib\site-packages\django\core\handlers\base.py", line 147, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\cbaldwin\Documents\teamTreehouseProjects\Python\project_11\p_11_venv\lib\site-packages\django\views\decorators\csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "C:\Users\cbaldwin\Documents\teamTreehouseProjects\Python\project_11\p_11_venv\lib\site-packages\django\views\generic\base.py", line 68, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\Users\cbaldwin\Documents\teamTreehouseProjects\Python\project_11\p_11_venv\lib\site-packages\rest_framework\views.py", line 466, in dispatch
+    response = self.handle_exception(exc)
+  File "C:\Users\cbaldwin\Documents\teamTreehouseProjects\Python\project_11\p_11_venv\lib\site-packages\rest_framework\views.py", line 463, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "C:\Users\cbaldwin\Documents\teamTreehouseProjects\Python\project_11\p_11_venv\lib\site-packages\rest_framework\decorators.py", line 52, in handler
+    return func(*args, **kwargs)
+  File "C:\Users\cbaldwin\Documents\teamTreehouseProjects\Python\project_11\backend\pugorugh\views.py", line 55, in retrieve_update_userpref
+    myuserpref = models.UserPref.objects.get(user=self.request.user)
+NameError: name 'self' is not defined
+ERROR:django.request:Internal Server Error: /api/user/preferences/
+Traceback (most recent call last):
+  File "C:\Users\cbaldwin\Documents\teamTreehouseProjects\Python\project_11\p_11_venv\lib\site-packages\django\core\handlers\base.py", line 149, in get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\cbaldwin\Documents\teamTreehouseProjects\Python\project_11\p_11_venv\lib\site-packages\django\core\handlers\base.py", line 147, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\cbaldwin\Documents\teamTreehouseProjects\Python\project_11\p_11_venv\lib\site-packages\django\views\decorators\csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "C:\Users\cbaldwin\Documents\teamTreehouseProjects\Python\project_11\p_11_venv\lib\site-packages\django\views\generic\base.py", line 68, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\Users\cbaldwin\Documents\teamTreehouseProjects\Python\project_11\p_11_venv\lib\site-packages\rest_framework\views.py", line 466, in dispatch
+    response = self.handle_exception(exc)
+  File "C:\Users\cbaldwin\Documents\teamTreehouseProjects\Python\project_11\p_11_venv\lib\site-packages\rest_framework\views.py", line 463, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "C:\Users\cbaldwin\Documents\teamTreehouseProjects\Python\project_11\p_11_venv\lib\site-packages\rest_framework\decorators.py", line 52, in handler
+    return func(*args, **kwargs)
+  File "C:\Users\cbaldwin\Documents\teamTreehouseProjects\Python\project_11\backend\pugorugh\views.py", line 55, in retrieve_update_userpref
+    myuserpref = models.UserPref.objects.get(user=self.request.user)
+NameError: name 'self' is not defined
+ERROR:django.request:Internal Server Error: /api/user/preferences/
+Traceback (most recent call last):
+  File "C:\Users\cbaldwin\Documents\teamTreehouseProjects\Python\project_11\p_11_venv\lib\site-packages\django\db\backends\utils.py", line 64, in execute
+    return self.cursor.execute(sql, params)
+  File "C:\Users\cbaldwin\Documents\teamTreehouseProjects\Python\project_11\p_11_venv\lib\site-packages\django\db\backends\sqlite3\base.py", line 323, in execute
+    return Database.Cursor.execute(self, query, params)
+sqlite3.OperationalError: no such table: pugorugh_userpref
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\cbaldwin\Documents\teamTreehouseProjects\Python\project_11\p_11_venv\lib\site-packages\django\core\handlers\base.py", line 149, in get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\cbaldwin\Documents\teamTreehouseProjects\Python\project_11\p_11_venv\lib\site-packages\django\core\handlers\base.py", line 147, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\cbaldwin\Documents\teamTreehouseProjects\Python\project_11\p_11_venv\lib\site-packages\django\views\decorators\csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "C:\Users\cbaldwin\Documents\teamTreehouseProjects\Python\project_11\p_11_venv\lib\site-packages\django\views\generic\base.py", line 68, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\Users\cbaldwin\Documents\teamTreehouseProjects\Python\project_11\p_11_venv\lib\site-packages\rest_framework\views.py", line 466, in dispatch
+    response = self.handle_exception(exc)
+  File "C:\Users\cbaldwin\Documents\teamTreehouseProjects\Python\project_11\p_11_venv\lib\site-packages\rest_framework\views.py", line 463, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "C:\Users\cbaldwin\Documents\teamTreehouseProjects\Python\project_11\p_11_venv\lib\site-packages\rest_framework\decorators.py", line 52, in handler
+    return func(*args, **kwargs)
+  File "C:\Users\cbaldwin\Documents\teamTreehouseProjects\Python\project_11\backend\pugorugh\views.py", line 55, in retrieve_update_userpref
+    myuserpref = models.UserPref.objects.get(user=request.user)
+  File "C:\Users\cbaldwin\Documents\teamTreehouseProjects\Python\project_11\p_11_venv\lib\site-packages\django\db\models\manager.py", line 122, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "C:\Users\cbaldwin\Documents\teamTreehouseProjects\Python\project_11\p_11_venv\lib\site-packages\django\db\models\query.py", line 381, in get
+    num = len(clone)
+  File "C:\Users\cbaldwin\Documents\teamTreehouseProjects\Python\project_11\p_11_venv\lib\site-packages\django\db\models\query.py", line 240, in __len__
+    self._fetch_all()
+  File "C:\Users\cbaldwin\Documents\teamTreehouseProjects\Python\project_11\p_11_venv\lib\site-packages\django\db\models\query.py", line 1074, in _fetch_all
+    self._result_cache = list(self.iterator())
+  File "C:\Users\cbaldwin\Documents\teamTreehouseProjects\Python\project_11\p_11_venv\lib\site-packages\django\db\models\query.py", line 52, in __iter__
+    results = compiler.execute_sql()
+  File "C:\Users\cbaldwin\Documents\teamTreehouseProjects\Python\project_11\p_11_venv\lib\site-packages\django\db\models\sql\compiler.py", line 848, in execute_sql
+    cursor.execute(sql, params)
+  File "C:\Users\cbaldwin\Documents\teamTreehouseProjects\Python\project_11\p_11_venv\lib\site-packages\django\db\backends\utils.py", line 79, in execute
+    return super(CursorDebugWrapper, self).execute(sql, params)
+  File "C:\Users\cbaldwin\Documents\teamTreehouseProjects\Python\project_11\p_11_venv\lib\site-packages\django\db\backends\utils.py", line 64, in execute
+    return self.cursor.execute(sql, params)
+  File "C:\Users\cbaldwin\Documents\teamTreehouseProjects\Python\project_11\p_11_venv\lib\site-packages\django\db\utils.py", line 95, in __exit__
+    six.reraise(dj_exc_type, dj_exc_value, traceback)
+  File "C:\Users\cbaldwin\Documents\teamTreehouseProjects\Python\project_11\p_11_venv\lib\site-packages\django\utils\six.py", line 685, in reraise
+    raise value.with_traceback(tb)
+  File "C:\Users\cbaldwin\Documents\teamTreehouseProjects\Python\project_11\p_11_venv\lib\site-packages\django\db\backends\utils.py", line 64, in execute
+    return self.cursor.execute(sql, params)
+  File "C:\Users\cbaldwin\Documents\teamTreehouseProjects\Python\project_11\p_11_venv\lib\site-packages\django\db\backends\sqlite3\base.py", line 323, in execute
+    return Database.Cursor.execute(self, query, params)
+django.db.utils.OperationalError: no such table: pugorugh_userpref
+WARNING:django.request:Not Found: /api/dog/-1/undecided/next/
+ERROR:django.request:Internal Server Error: /api/user/preferences/
+Traceback (most recent call last):
+  File "C:\Users\cbaldwin\Documents\teamTreehouseProjects\Python\project_11\p_11_venv\lib\site-packages\django\db\backends\utils.py", line 64, in execute
+    return self.cursor.execute(sql, params)
+  File "C:\Users\cbaldwin\Documents\teamTreehouseProjects\Python\project_11\p_11_venv\lib\site-packages\django\db\backends\sqlite3\base.py", line 323, in execute
+    return Database.Cursor.execute(self, query, params)
+sqlite3.OperationalError: no such table: pugorugh_userpref
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\cbaldwin\Documents\teamTreehouseProjects\Python\project_11\p_11_venv\lib\site-packages\django\core\handlers\base.py", line 149, in get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\cbaldwin\Documents\teamTreehouseProjects\Python\project_11\p_11_venv\lib\site-packages\django\core\handlers\base.py", line 147, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\cbaldwin\Documents\teamTreehouseProjects\Python\project_11\p_11_venv\lib\site-packages\django\views\decorators\csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "C:\Users\cbaldwin\Documents\teamTreehouseProjects\Python\project_11\p_11_venv\lib\site-packages\django\views\generic\base.py", line 68, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\Users\cbaldwin\Documents\teamTreehouseProjects\Python\project_11\p_11_venv\lib\site-packages\rest_framework\views.py", line 466, in dispatch
+    response = self.handle_exception(exc)
+  File "C:\Users\cbaldwin\Documents\teamTreehouseProjects\Python\project_11\p_11_venv\lib\site-packages\rest_framework\views.py", line 463, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "C:\Users\cbaldwin\Documents\teamTreehouseProjects\Python\project_11\p_11_venv\lib\site-packages\rest_framework\decorators.py", line 52, in handler
+    return func(*args, **kwargs)
+  File "C:\Users\cbaldwin\Documents\teamTreehouseProjects\Python\project_11\backend\pugorugh\views.py", line 55, in retrieve_update_userpref
+    myuserpref = models.UserPref.objects.get(user=request.user)
+  File "C:\Users\cbaldwin\Documents\teamTreehouseProjects\Python\project_11\p_11_venv\lib\site-packages\django\db\models\manager.py", line 122, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "C:\Users\cbaldwin\Documents\teamTreehouseProjects\Python\project_11\p_11_venv\lib\site-packages\django\db\models\query.py", line 381, in get
+    num = len(clone)
+  File "C:\Users\cbaldwin\Documents\teamTreehouseProjects\Python\project_11\p_11_venv\lib\site-packages\django\db\models\query.py", line 240, in __len__
+    self._fetch_all()
+  File "C:\Users\cbaldwin\Documents\teamTreehouseProjects\Python\project_11\p_11_venv\lib\site-packages\django\db\models\query.py", line 1074, in _fetch_all
+    self._result_cache = list(self.iterator())
+  File "C:\Users\cbaldwin\Documents\teamTreehouseProjects\Python\project_11\p_11_venv\lib\site-packages\django\db\models\query.py", line 52, in __iter__
+    results = compiler.execute_sql()
+  File "C:\Users\cbaldwin\Documents\teamTreehouseProjects\Python\project_11\p_11_venv\lib\site-packages\django\db\models\sql\compiler.py", line 848, in execute_sql
+    cursor.execute(sql, params)
+  File "C:\Users\cbaldwin\Documents\teamTreehouseProjects\Python\project_11\p_11_venv\lib\site-packages\django\db\backends\utils.py", line 79, in execute
+    return super(CursorDebugWrapper, self).execute(sql, params)
+  File "C:\Users\cbaldwin\Documents\teamTreehouseProjects\Python\project_11\p_11_venv\lib\site-packages\django\db\backends\utils.py", line 64, in execute
+    return self.cursor.execute(sql, params)
+  File "C:\Users\cbaldwin\Documents\teamTreehouseProjects\Python\project_11\p_11_venv\lib\site-packages\django\db\utils.py", line 95, in __exit__
+    six.reraise(dj_exc_type, dj_exc_value, traceback)
+  File "C:\Users\cbaldwin\Documents\teamTreehouseProjects\Python\project_11\p_11_venv\lib\site-packages\django\utils\six.py", line 685, in reraise
+    raise value.with_traceback(tb)
+  File "C:\Users\cbaldwin\Documents\teamTreehouseProjects\Python\project_11\p_11_venv\lib\site-packages\django\db\backends\utils.py", line 64, in execute
+    return self.cursor.execute(sql, params)
+  File "C:\Users\cbaldwin\Documents\teamTreehouseProjects\Python\project_11\p_11_venv\lib\site-packages\django\db\backends\sqlite3\base.py", line 323, in execute
+    return Database.Cursor.execute(self, query, params)
+django.db.utils.OperationalError: no such table: pugorugh_userpref
+ERROR:django.request:Internal Server Error: /api/user/preferences/
+Traceback (most recent call last):
+  File "C:\Users\cbaldwin\Documents\teamTreehouseProjects\Python\project_11\p_11_venv\lib\site-packages\django\db\backends\utils.py", line 64, in execute
+    return self.cursor.execute(sql, params)
+  File "C:\Users\cbaldwin\Documents\teamTreehouseProjects\Python\project_11\p_11_venv\lib\site-packages\django\db\backends\sqlite3\base.py", line 323, in execute
+    return Database.Cursor.execute(self, query, params)
+sqlite3.OperationalError: no such table: pugorugh_userpref
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\cbaldwin\Documents\teamTreehouseProjects\Python\project_11\p_11_venv\lib\site-packages\django\core\handlers\base.py", line 149, in get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\cbaldwin\Documents\teamTreehouseProjects\Python\project_11\p_11_venv\lib\site-packages\django\core\handlers\base.py", line 147, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\cbaldwin\Documents\teamTreehouseProjects\Python\project_11\p_11_venv\lib\site-packages\django\views\decorators\csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "C:\Users\cbaldwin\Documents\teamTreehouseProjects\Python\project_11\p_11_venv\lib\site-packages\django\views\generic\base.py", line 68, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\Users\cbaldwin\Documents\teamTreehouseProjects\Python\project_11\p_11_venv\lib\site-packages\rest_framework\views.py", line 466, in dispatch
+    response = self.handle_exception(exc)
+  File "C:\Users\cbaldwin\Documents\teamTreehouseProjects\Python\project_11\p_11_venv\lib\site-packages\rest_framework\views.py", line 463, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "C:\Users\cbaldwin\Documents\teamTreehouseProjects\Python\project_11\p_11_venv\lib\site-packages\rest_framework\decorators.py", line 52, in handler
+    return func(*args, **kwargs)
+  File "C:\Users\cbaldwin\Documents\teamTreehouseProjects\Python\project_11\backend\pugorugh\views.py", line 55, in retrieve_update_userpref
+    myuserpref = models.UserPref.objects.get(user=request.user)
+  File "C:\Users\cbaldwin\Documents\teamTreehouseProjects\Python\project_11\p_11_venv\lib\site-packages\django\db\models\manager.py", line 122, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "C:\Users\cbaldwin\Documents\teamTreehouseProjects\Python\project_11\p_11_venv\lib\site-packages\django\db\models\query.py", line 381, in get
+    num = len(clone)
+  File "C:\Users\cbaldwin\Documents\teamTreehouseProjects\Python\project_11\p_11_venv\lib\site-packages\django\db\models\query.py", line 240, in __len__
+    self._fetch_all()
+  File "C:\Users\cbaldwin\Documents\teamTreehouseProjects\Python\project_11\p_11_venv\lib\site-packages\django\db\models\query.py", line 1074, in _fetch_all
+    self._result_cache = list(self.iterator())
+  File "C:\Users\cbaldwin\Documents\teamTreehouseProjects\Python\project_11\p_11_venv\lib\site-packages\django\db\models\query.py", line 52, in __iter__
+    results = compiler.execute_sql()
+  File "C:\Users\cbaldwin\Documents\teamTreehouseProjects\Python\project_11\p_11_venv\lib\site-packages\django\db\models\sql\compiler.py", line 848, in execute_sql
+    cursor.execute(sql, params)
+  File "C:\Users\cbaldwin\Documents\teamTreehouseProjects\Python\project_11\p_11_venv\lib\site-packages\django\db\backends\utils.py", line 79, in execute
+    return super(CursorDebugWrapper, self).execute(sql, params)
+  File "C:\Users\cbaldwin\Documents\teamTreehouseProjects\Python\project_11\p_11_venv\lib\site-packages\django\db\backends\utils.py", line 64, in execute
+    return self.cursor.execute(sql, params)
+  File "C:\Users\cbaldwin\Documents\teamTreehouseProjects\Python\project_11\p_11_venv\lib\site-packages\django\db\utils.py", line 95, in __exit__
+    six.reraise(dj_exc_type, dj_exc_value, traceback)
+  File "C:\Users\cbaldwin\Documents\teamTreehouseProjects\Python\project_11\p_11_venv\lib\site-packages\django\utils\six.py", line 685, in reraise
+    raise value.with_traceback(tb)
+  File "C:\Users\cbaldwin\Documents\teamTreehouseProjects\Python\project_11\p_11_venv\lib\site-packages\django\db\backends\utils.py", line 64, in execute
+    return self.cursor.execute(sql, params)
+  File "C:\Users\cbaldwin\Documents\teamTreehouseProjects\Python\project_11\p_11_venv\lib\site-packages\django\db\backends\sqlite3\base.py", line 323, in execute
+    return Database.Cursor.execute(self, query, params)
+django.db.utils.OperationalError: no such table: pugorugh_userpref
+WARNING:django.request:Not Found: /api/dog/-1/undecided/next/
+WARNING:django.request:Not Found: /api/dog/-1/undecided/next/
+ERROR:django.request:Internal Server Error: /api/user/preferences/
+Traceback (most recent call last):
+  File "C:\Users\cbaldwin\Documents\teamTreehouseProjects\Python\project_11\p_11_venv\lib\site-packages\django\db\backends\utils.py", line 64, in execute
+    return self.cursor.execute(sql, params)
+  File "C:\Users\cbaldwin\Documents\teamTreehouseProjects\Python\project_11\p_11_venv\lib\site-packages\django\db\backends\sqlite3\base.py", line 323, in execute
+    return Database.Cursor.execute(self, query, params)
+sqlite3.OperationalError: no such table: pugorugh_userpref
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\cbaldwin\Documents\teamTreehouseProjects\Python\project_11\p_11_venv\lib\site-packages\django\core\handlers\base.py", line 149, in get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\cbaldwin\Documents\teamTreehouseProjects\Python\project_11\p_11_venv\lib\site-packages\django\core\handlers\base.py", line 147, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\cbaldwin\Documents\teamTreehouseProjects\Python\project_11\p_11_venv\lib\site-packages\django\views\decorators\csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "C:\Users\cbaldwin\Documents\teamTreehouseProjects\Python\project_11\p_11_venv\lib\site-packages\django\views\generic\base.py", line 68, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\Users\cbaldwin\Documents\teamTreehouseProjects\Python\project_11\p_11_venv\lib\site-packages\rest_framework\views.py", line 466, in dispatch
+    response = self.handle_exception(exc)
+  File "C:\Users\cbaldwin\Documents\teamTreehouseProjects\Python\project_11\p_11_venv\lib\site-packages\rest_framework\views.py", line 463, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "C:\Users\cbaldwin\Documents\teamTreehouseProjects\Python\project_11\p_11_venv\lib\site-packages\rest_framework\decorators.py", line 52, in handler
+    return func(*args, **kwargs)
+  File "C:\Users\cbaldwin\Documents\teamTreehouseProjects\Python\project_11\backend\pugorugh\views.py", line 55, in retrieve_update_userpref
+    myuserpref = models.UserPref.objects.get(user=request.user)
+  File "C:\Users\cbaldwin\Documents\teamTreehouseProjects\Python\project_11\p_11_venv\lib\site-packages\django\db\models\manager.py", line 122, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "C:\Users\cbaldwin\Documents\teamTreehouseProjects\Python\project_11\p_11_venv\lib\site-packages\django\db\models\query.py", line 381, in get
+    num = len(clone)
+  File "C:\Users\cbaldwin\Documents\teamTreehouseProjects\Python\project_11\p_11_venv\lib\site-packages\django\db\models\query.py", line 240, in __len__
+    self._fetch_all()
+  File "C:\Users\cbaldwin\Documents\teamTreehouseProjects\Python\project_11\p_11_venv\lib\site-packages\django\db\models\query.py", line 1074, in _fetch_all
+    self._result_cache = list(self.iterator())
+  File "C:\Users\cbaldwin\Documents\teamTreehouseProjects\Python\project_11\p_11_venv\lib\site-packages\django\db\models\query.py", line 52, in __iter__
+    results = compiler.execute_sql()
+  File "C:\Users\cbaldwin\Documents\teamTreehouseProjects\Python\project_11\p_11_venv\lib\site-packages\django\db\models\sql\compiler.py", line 848, in execute_sql
+    cursor.execute(sql, params)
+  File "C:\Users\cbaldwin\Documents\teamTreehouseProjects\Python\project_11\p_11_venv\lib\site-packages\django\db\backends\utils.py", line 79, in execute
+    return super(CursorDebugWrapper, self).execute(sql, params)
+  File "C:\Users\cbaldwin\Documents\teamTreehouseProjects\Python\project_11\p_11_venv\lib\site-packages\django\db\backends\utils.py", line 64, in execute
+    return self.cursor.execute(sql, params)
+  File "C:\Users\cbaldwin\Documents\teamTreehouseProjects\Python\project_11\p_11_venv\lib\site-packages\django\db\utils.py", line 95, in __exit__
+    six.reraise(dj_exc_type, dj_exc_value, traceback)
+  File "C:\Users\cbaldwin\Documents\teamTreehouseProjects\Python\project_11\p_11_venv\lib\site-packages\django\utils\six.py", line 685, in reraise
+    raise value.with_traceback(tb)
+  File "C:\Users\cbaldwin\Documents\teamTreehouseProjects\Python\project_11\p_11_venv\lib\site-packages\django\db\backends\utils.py", line 64, in execute
+    return self.cursor.execute(sql, params)
+  File "C:\Users\cbaldwin\Documents\teamTreehouseProjects\Python\project_11\p_11_venv\lib\site-packages\django\db\backends\sqlite3\base.py", line 323, in execute
+    return Database.Cursor.execute(self, query, params)
+django.db.utils.OperationalError: no such table: pugorugh_userpref
+WARNING:django.request:Not Found: /api/user/preferences
+WARNING:django.request:Not Found: /api/dog/-1/undecided/next/
+WARNING:django.request:Not Found: /api/dog/-1/undecided/next/
+ERROR:django.request:Internal Server Error: /api/user/preferences/
+Traceback (most recent call last):
+  File "C:\Users\cbaldwin\Documents\teamTreehouseProjects\Python\project_11\p_11_venv\lib\site-packages\django\db\backends\utils.py", line 64, in execute
+    return self.cursor.execute(sql, params)
+  File "C:\Users\cbaldwin\Documents\teamTreehouseProjects\Python\project_11\p_11_venv\lib\site-packages\django\db\backends\sqlite3\base.py", line 323, in execute
+    return Database.Cursor.execute(self, query, params)
+sqlite3.OperationalError: no such table: pugorugh_userpref
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\cbaldwin\Documents\teamTreehouseProjects\Python\project_11\p_11_venv\lib\site-packages\django\core\handlers\base.py", line 149, in get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\cbaldwin\Documents\teamTreehouseProjects\Python\project_11\p_11_venv\lib\site-packages\django\core\handlers\base.py", line 147, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\cbaldwin\Documents\teamTreehouseProjects\Python\project_11\p_11_venv\lib\site-packages\django\views\decorators\csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "C:\Users\cbaldwin\Documents\teamTreehouseProjects\Python\project_11\p_11_venv\lib\site-packages\django\views\generic\base.py", line 68, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\Users\cbaldwin\Documents\teamTreehouseProjects\Python\project_11\p_11_venv\lib\site-packages\rest_framework\views.py", line 466, in dispatch
+    response = self.handle_exception(exc)
+  File "C:\Users\cbaldwin\Documents\teamTreehouseProjects\Python\project_11\p_11_venv\lib\site-packages\rest_framework\views.py", line 463, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "C:\Users\cbaldwin\Documents\teamTreehouseProjects\Python\project_11\p_11_venv\lib\site-packages\rest_framework\decorators.py", line 52, in handler
+    return func(*args, **kwargs)
+  File "C:\Users\cbaldwin\Documents\teamTreehouseProjects\Python\project_11\backend\pugorugh\views.py", line 56, in retrieve_update_userpref
+    myuserpref = models.UserPref.objects.get(user=request.user)
+  File "C:\Users\cbaldwin\Documents\teamTreehouseProjects\Python\project_11\p_11_venv\lib\site-packages\django\db\models\manager.py", line 122, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "C:\Users\cbaldwin\Documents\teamTreehouseProjects\Python\project_11\p_11_venv\lib\site-packages\django\db\models\query.py", line 381, in get
+    num = len(clone)
+  File "C:\Users\cbaldwin\Documents\teamTreehouseProjects\Python\project_11\p_11_venv\lib\site-packages\django\db\models\query.py", line 240, in __len__
+    self._fetch_all()
+  File "C:\Users\cbaldwin\Documents\teamTreehouseProjects\Python\project_11\p_11_venv\lib\site-packages\django\db\models\query.py", line 1074, in _fetch_all
+    self._result_cache = list(self.iterator())
+  File "C:\Users\cbaldwin\Documents\teamTreehouseProjects\Python\project_11\p_11_venv\lib\site-packages\django\db\models\query.py", line 52, in __iter__
+    results = compiler.execute_sql()
+  File "C:\Users\cbaldwin\Documents\teamTreehouseProjects\Python\project_11\p_11_venv\lib\site-packages\django\db\models\sql\compiler.py", line 848, in execute_sql
+    cursor.execute(sql, params)
+  File "C:\Users\cbaldwin\Documents\teamTreehouseProjects\Python\project_11\p_11_venv\lib\site-packages\django\db\backends\utils.py", line 79, in execute
+    return super(CursorDebugWrapper, self).execute(sql, params)
+  File "C:\Users\cbaldwin\Documents\teamTreehouseProjects\Python\project_11\p_11_venv\lib\site-packages\django\db\backends\utils.py", line 64, in execute
+    return self.cursor.execute(sql, params)
+  File "C:\Users\cbaldwin\Documents\teamTreehouseProjects\Python\project_11\p_11_venv\lib\site-packages\django\db\utils.py", line 95, in __exit__
+    six.reraise(dj_exc_type, dj_exc_value, traceback)
+  File "C:\Users\cbaldwin\Documents\teamTreehouseProjects\Python\project_11\p_11_venv\lib\site-packages\django\utils\six.py", line 685, in reraise
+    raise value.with_traceback(tb)
+  File "C:\Users\cbaldwin\Documents\teamTreehouseProjects\Python\project_11\p_11_venv\lib\site-packages\django\db\backends\utils.py", line 64, in execute
+    return self.cursor.execute(sql, params)
+  File "C:\Users\cbaldwin\Documents\teamTreehouseProjects\Python\project_11\p_11_venv\lib\site-packages\django\db\backends\sqlite3\base.py", line 323, in execute
+    return Database.Cursor.execute(self, query, params)
+django.db.utils.OperationalError: no such table: pugorugh_userpref
+WARNING:django.request:Not Found: /admin
+WARNING:django.request:Not Found: /api/dog/-1/undecided/next/
+ERROR:django.request:Internal Server Error: /api/user/preferences/
+Traceback (most recent call last):
+  File "C:\Users\cbaldwin\Documents\teamTreehouseProjects\Python\project_11\p_11_venv\lib\site-packages\django\db\backends\utils.py", line 64, in execute
+    return self.cursor.execute(sql, params)
+  File "C:\Users\cbaldwin\Documents\teamTreehouseProjects\Python\project_11\p_11_venv\lib\site-packages\django\db\backends\sqlite3\base.py", line 323, in execute
+    return Database.Cursor.execute(self, query, params)
+sqlite3.OperationalError: no such table: pugorugh_userpref
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\cbaldwin\Documents\teamTreehouseProjects\Python\project_11\p_11_venv\lib\site-packages\django\core\handlers\base.py", line 149, in get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\cbaldwin\Documents\teamTreehouseProjects\Python\project_11\p_11_venv\lib\site-packages\django\core\handlers\base.py", line 147, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\cbaldwin\Documents\teamTreehouseProjects\Python\project_11\p_11_venv\lib\site-packages\django\views\decorators\csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "C:\Users\cbaldwin\Documents\teamTreehouseProjects\Python\project_11\p_11_venv\lib\site-packages\django\views\generic\base.py", line 68, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\Users\cbaldwin\Documents\teamTreehouseProjects\Python\project_11\p_11_venv\lib\site-packages\rest_framework\views.py", line 466, in dispatch
+    response = self.handle_exception(exc)
+  File "C:\Users\cbaldwin\Documents\teamTreehouseProjects\Python\project_11\p_11_venv\lib\site-packages\rest_framework\views.py", line 463, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "C:\Users\cbaldwin\Documents\teamTreehouseProjects\Python\project_11\p_11_venv\lib\site-packages\rest_framework\decorators.py", line 52, in handler
+    return func(*args, **kwargs)
+  File "C:\Users\cbaldwin\Documents\teamTreehouseProjects\Python\project_11\backend\pugorugh\views.py", line 56, in retrieve_update_userpref
+    myuserpref = models.UserPref.objects.get(user=request.user)
+  File "C:\Users\cbaldwin\Documents\teamTreehouseProjects\Python\project_11\p_11_venv\lib\site-packages\django\db\models\manager.py", line 122, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "C:\Users\cbaldwin\Documents\teamTreehouseProjects\Python\project_11\p_11_venv\lib\site-packages\django\db\models\query.py", line 381, in get
+    num = len(clone)
+  File "C:\Users\cbaldwin\Documents\teamTreehouseProjects\Python\project_11\p_11_venv\lib\site-packages\django\db\models\query.py", line 240, in __len__
+    self._fetch_all()
+  File "C:\Users\cbaldwin\Documents\teamTreehouseProjects\Python\project_11\p_11_venv\lib\site-packages\django\db\models\query.py", line 1074, in _fetch_all
+    self._result_cache = list(self.iterator())
+  File "C:\Users\cbaldwin\Documents\teamTreehouseProjects\Python\project_11\p_11_venv\lib\site-packages\django\db\models\query.py", line 52, in __iter__
+    results = compiler.execute_sql()
+  File "C:\Users\cbaldwin\Documents\teamTreehouseProjects\Python\project_11\p_11_venv\lib\site-packages\django\db\models\sql\compiler.py", line 848, in execute_sql
+    cursor.execute(sql, params)
+  File "C:\Users\cbaldwin\Documents\teamTreehouseProjects\Python\project_11\p_11_venv\lib\site-packages\django\db\backends\utils.py", line 79, in execute
+    return super(CursorDebugWrapper, self).execute(sql, params)
+  File "C:\Users\cbaldwin\Documents\teamTreehouseProjects\Python\project_11\p_11_venv\lib\site-packages\django\db\backends\utils.py", line 64, in execute
+    return self.cursor.execute(sql, params)
+  File "C:\Users\cbaldwin\Documents\teamTreehouseProjects\Python\project_11\p_11_venv\lib\site-packages\django\db\utils.py", line 95, in __exit__
+    six.reraise(dj_exc_type, dj_exc_value, traceback)
+  File "C:\Users\cbaldwin\Documents\teamTreehouseProjects\Python\project_11\p_11_venv\lib\site-packages\django\utils\six.py", line 685, in reraise
+    raise value.with_traceback(tb)
+  File "C:\Users\cbaldwin\Documents\teamTreehouseProjects\Python\project_11\p_11_venv\lib\site-packages\django\db\backends\utils.py", line 64, in execute
+    return self.cursor.execute(sql, params)
+  File "C:\Users\cbaldwin\Documents\teamTreehouseProjects\Python\project_11\p_11_venv\lib\site-packages\django\db\backends\sqlite3\base.py", line 323, in execute
+    return Database.Cursor.execute(self, query, params)
+django.db.utils.OperationalError: no such table: pugorugh_userpref
+ERROR:django.request:Internal Server Error: /api/user/preferences/
+Traceback (most recent call last):
+  File "C:\Users\cbaldwin\Documents\teamTreehouseProjects\Python\project_11\p_11_venv\lib\site-packages\django\db\backends\utils.py", line 64, in execute
+    return self.cursor.execute(sql, params)
+  File "C:\Users\cbaldwin\Documents\teamTreehouseProjects\Python\project_11\p_11_venv\lib\site-packages\django\db\backends\sqlite3\base.py", line 323, in execute
+    return Database.Cursor.execute(self, query, params)
+sqlite3.OperationalError: no such table: pugorugh_userpref
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\cbaldwin\Documents\teamTreehouseProjects\Python\project_11\backend\pugorugh\views.py", line 47, in get_object
+    x = self.get_queryset().get(user=self.request.user)
+  File "C:\Users\cbaldwin\Documents\teamTreehouseProjects\Python\project_11\p_11_venv\lib\site-packages\django\db\models\query.py", line 381, in get
+    num = len(clone)
+  File "C:\Users\cbaldwin\Documents\teamTreehouseProjects\Python\project_11\p_11_venv\lib\site-packages\django\db\models\query.py", line 240, in __len__
+    self._fetch_all()
+  File "C:\Users\cbaldwin\Documents\teamTreehouseProjects\Python\project_11\p_11_venv\lib\site-packages\django\db\models\query.py", line 1074, in _fetch_all
+    self._result_cache = list(self.iterator())
+  File "C:\Users\cbaldwin\Documents\teamTreehouseProjects\Python\project_11\p_11_venv\lib\site-packages\django\db\models\query.py", line 52, in __iter__
+    results = compiler.execute_sql()
+  File "C:\Users\cbaldwin\Documents\teamTreehouseProjects\Python\project_11\p_11_venv\lib\site-packages\django\db\models\sql\compiler.py", line 848, in execute_sql
+    cursor.execute(sql, params)
+  File "C:\Users\cbaldwin\Documents\teamTreehouseProjects\Python\project_11\p_11_venv\lib\site-packages\django\db\backends\utils.py", line 79, in execute
+    return super(CursorDebugWrapper, self).execute(sql, params)
+  File "C:\Users\cbaldwin\Documents\teamTreehouseProjects\Python\project_11\p_11_venv\lib\site-packages\django\db\backends\utils.py", line 64, in execute
+    return self.cursor.execute(sql, params)
+  File "C:\Users\cbaldwin\Documents\teamTreehouseProjects\Python\project_11\p_11_venv\lib\site-packages\django\db\utils.py", line 95, in __exit__
+    six.reraise(dj_exc_type, dj_exc_value, traceback)
+  File "C:\Users\cbaldwin\Documents\teamTreehouseProjects\Python\project_11\p_11_venv\lib\site-packages\django\utils\six.py", line 685, in reraise
+    raise value.with_traceback(tb)
+  File "C:\Users\cbaldwin\Documents\teamTreehouseProjects\Python\project_11\p_11_venv\lib\site-packages\django\db\backends\utils.py", line 64, in execute
+    return self.cursor.execute(sql, params)
+  File "C:\Users\cbaldwin\Documents\teamTreehouseProjects\Python\project_11\p_11_venv\lib\site-packages\django\db\backends\sqlite3\base.py", line 323, in execute
+    return Database.Cursor.execute(self, query, params)
+django.db.utils.OperationalError: no such table: pugorugh_userpref
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\cbaldwin\Documents\teamTreehouseProjects\Python\project_11\p_11_venv\lib\site-packages\django\core\handlers\base.py", line 149, in get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\cbaldwin\Documents\teamTreehouseProjects\Python\project_11\p_11_venv\lib\site-packages\django\core\handlers\base.py", line 147, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\cbaldwin\Documents\teamTreehouseProjects\Python\project_11\p_11_venv\lib\site-packages\django\views\decorators\csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "C:\Users\cbaldwin\Documents\teamTreehouseProjects\Python\project_11\p_11_venv\lib\site-packages\django\views\generic\base.py", line 68, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\Users\cbaldwin\Documents\teamTreehouseProjects\Python\project_11\p_11_venv\lib\site-packages\rest_framework\views.py", line 466, in dispatch
+    response = self.handle_exception(exc)
+  File "C:\Users\cbaldwin\Documents\teamTreehouseProjects\Python\project_11\p_11_venv\lib\site-packages\rest_framework\views.py", line 463, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "C:\Users\cbaldwin\Documents\teamTreehouseProjects\Python\project_11\p_11_venv\lib\site-packages\rest_framework\generics.py", line 253, in get
+    return self.retrieve(request, *args, **kwargs)
+  File "C:\Users\cbaldwin\Documents\teamTreehouseProjects\Python\project_11\p_11_venv\lib\site-packages\rest_framework\mixins.py", line 56, in retrieve
+    instance = self.get_object()
+  File "C:\Users\cbaldwin\Documents\teamTreehouseProjects\Python\project_11\backend\pugorugh\views.py", line 48, in get_object
+    except ObjectDoesNotExist:
+NameError: name 'ObjectDoesNotExist' is not defined
+ERROR:django.request:Internal Server Error: /api/user/preferences/
+Traceback (most recent call last):
+  File "C:\Users\cbaldwin\Documents\teamTreehouseProjects\Python\project_11\p_11_venv\lib\site-packages\django\db\backends\utils.py", line 64, in execute
+    return self.cursor.execute(sql, params)
+  File "C:\Users\cbaldwin\Documents\teamTreehouseProjects\Python\project_11\p_11_venv\lib\site-packages\django\db\backends\sqlite3\base.py", line 323, in execute
+    return Database.Cursor.execute(self, query, params)
+sqlite3.OperationalError: no such table: pugorugh_userpref
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\cbaldwin\Documents\teamTreehouseProjects\Python\project_11\p_11_venv\lib\site-packages\django\core\handlers\base.py", line 149, in get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\cbaldwin\Documents\teamTreehouseProjects\Python\project_11\p_11_venv\lib\site-packages\django\core\handlers\base.py", line 147, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\cbaldwin\Documents\teamTreehouseProjects\Python\project_11\p_11_venv\lib\site-packages\django\views\decorators\csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "C:\Users\cbaldwin\Documents\teamTreehouseProjects\Python\project_11\p_11_venv\lib\site-packages\django\views\generic\base.py", line 68, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\Users\cbaldwin\Documents\teamTreehouseProjects\Python\project_11\p_11_venv\lib\site-packages\rest_framework\views.py", line 466, in dispatch
+    response = self.handle_exception(exc)
+  File "C:\Users\cbaldwin\Documents\teamTreehouseProjects\Python\project_11\p_11_venv\lib\site-packages\rest_framework\views.py", line 463, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "C:\Users\cbaldwin\Documents\teamTreehouseProjects\Python\project_11\p_11_venv\lib\site-packages\rest_framework\generics.py", line 253, in get
+    return self.retrieve(request, *args, **kwargs)
+  File "C:\Users\cbaldwin\Documents\teamTreehouseProjects\Python\project_11\p_11_venv\lib\site-packages\rest_framework\mixins.py", line 56, in retrieve
+    instance = self.get_object()
+  File "C:\Users\cbaldwin\Documents\teamTreehouseProjects\Python\project_11\backend\pugorugh\views.py", line 47, in get_object
+    x = self.get_queryset().get(user=self.request.user)
+  File "C:\Users\cbaldwin\Documents\teamTreehouseProjects\Python\project_11\p_11_venv\lib\site-packages\django\db\models\query.py", line 381, in get
+    num = len(clone)
+  File "C:\Users\cbaldwin\Documents\teamTreehouseProjects\Python\project_11\p_11_venv\lib\site-packages\django\db\models\query.py", line 240, in __len__
+    self._fetch_all()
+  File "C:\Users\cbaldwin\Documents\teamTreehouseProjects\Python\project_11\p_11_venv\lib\site-packages\django\db\models\query.py", line 1074, in _fetch_all
+    self._result_cache = list(self.iterator())
+  File "C:\Users\cbaldwin\Documents\teamTreehouseProjects\Python\project_11\p_11_venv\lib\site-packages\django\db\models\query.py", line 52, in __iter__
+    results = compiler.execute_sql()
+  File "C:\Users\cbaldwin\Documents\teamTreehouseProjects\Python\project_11\p_11_venv\lib\site-packages\django\db\models\sql\compiler.py", line 848, in execute_sql
+    cursor.execute(sql, params)
+  File "C:\Users\cbaldwin\Documents\teamTreehouseProjects\Python\project_11\p_11_venv\lib\site-packages\django\db\backends\utils.py", line 79, in execute
+    return super(CursorDebugWrapper, self).execute(sql, params)
+  File "C:\Users\cbaldwin\Documents\teamTreehouseProjects\Python\project_11\p_11_venv\lib\site-packages\django\db\backends\utils.py", line 64, in execute
+    return self.cursor.execute(sql, params)
+  File "C:\Users\cbaldwin\Documents\teamTreehouseProjects\Python\project_11\p_11_venv\lib\site-packages\django\db\utils.py", line 95, in __exit__
+    six.reraise(dj_exc_type, dj_exc_value, traceback)
+  File "C:\Users\cbaldwin\Documents\teamTreehouseProjects\Python\project_11\p_11_venv\lib\site-packages\django\utils\six.py", line 685, in reraise
+    raise value.with_traceback(tb)
+  File "C:\Users\cbaldwin\Documents\teamTreehouseProjects\Python\project_11\p_11_venv\lib\site-packages\django\db\backends\utils.py", line 64, in execute
+    return self.cursor.execute(sql, params)
+  File "C:\Users\cbaldwin\Documents\teamTreehouseProjects\Python\project_11\p_11_venv\lib\site-packages\django\db\backends\sqlite3\base.py", line 323, in execute
+    return Database.Cursor.execute(self, query, params)
+django.db.utils.OperationalError: no such table: pugorugh_userpref

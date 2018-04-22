@@ -1,3 +1,7 @@
+super user username and password: cbaldwin4
+token for user cbaldwin: 9f4c4c3e35ccc995e5bacac055f9ba55356eaf30
+
+
 # Pug or Ugh
 
 ## Requirements
