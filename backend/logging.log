@@ -851,3 +851,371 @@ WARNING:django.request:Not Found: /practice/1/
 WARNING:django.request:Not Found: /practice/1/
 WARNING:django.request:Not Found: /api/dog/1/undecided/next/
 WARNING:django.request:Not Found: /api/dog/1/undecided/next/
+WARNING:django.request:Not Found: /api/dog/undecided/next/
+WARNING:django.request:Not Found: /api/dog/1/undecided/next/
+WARNING:django.request:Not Found: /api/dog/1/undecided/next/
+WARNING:django.request:Not Found: /api/dog/1/undecided/next/
+WARNING:django.request:Not Found: /api/dog/1/undecided/next/
+WARNING:django.request:Not Found: /api/dog/1/undecided/next/
+WARNING:django.request:Not Found: /api/1/dog/undecided/next/
+WARNING:django.request:Not Found: /api/one/dog/undecided/next/
+WARNING:django.request:Not Found: /api/1/dog/undecided/next/
+WARNING:django.request:Not Found: /api/1/dog/undecided/next/
+WARNING:django.request:Not Found: /api/1/dog/undecided/next/
+WARNING:django.request:Not Found: /api/dog/1/undecided/next/
+WARNING:django.request:Not Found: /api/dog/1/undecided/next/
+WARNING:django.request:Not Found: /api/dog/1/undecided/next/
+WARNING:django.request:Not Found: /api/dog/1/undecided/
+WARNING:django.request:Not Found: /api/dog/1/undecided/next/
+WARNING:django.request:Not Found: /api/dog/1/undecided/next/
+WARNING:django.request:Not Found: /api/dog/1/undecided/next/
+WARNING:django.request:Not Found: /api/dog/1/undecided/next/
+WARNING:django.request:Not Found: /api/dog/-1/undecided/next/
+WARNING:django.request:Not Found: /api/dog/-1/undecided/next/
+WARNING:django.request:Not Found: /api/dog/-1/undecided/next/
+WARNING:django.request:Not Found: /api/dog/-1/undecided/next/
+WARNING:django.request:Not Found: /api/dog/1/liked/
+ERROR:django.request:Internal Server Error: /api/dog/5/liked/next/
+Traceback (most recent call last):
+  File "C:\Users\cbaldwin\Documents\teamTreehouseProjects\Python\project_11\p_11_venv\lib\site-packages\django\core\handlers\base.py", line 149, in get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\cbaldwin\Documents\teamTreehouseProjects\Python\project_11\p_11_venv\lib\site-packages\django\core\handlers\base.py", line 147, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\cbaldwin\Documents\teamTreehouseProjects\Python\project_11\p_11_venv\lib\site-packages\django\views\decorators\csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "C:\Users\cbaldwin\Documents\teamTreehouseProjects\Python\project_11\p_11_venv\lib\site-packages\django\views\generic\base.py", line 68, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\Users\cbaldwin\Documents\teamTreehouseProjects\Python\project_11\p_11_venv\lib\site-packages\rest_framework\views.py", line 466, in dispatch
+    response = self.handle_exception(exc)
+  File "C:\Users\cbaldwin\Documents\teamTreehouseProjects\Python\project_11\p_11_venv\lib\site-packages\rest_framework\views.py", line 463, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "C:\Users\cbaldwin\Documents\teamTreehouseProjects\Python\project_11\p_11_venv\lib\site-packages\rest_framework\generics.py", line 253, in get
+    return self.retrieve(request, *args, **kwargs)
+  File "C:\Users\cbaldwin\Documents\teamTreehouseProjects\Python\project_11\p_11_venv\lib\site-packages\rest_framework\mixins.py", line 56, in retrieve
+    instance = self.get_object()
+  File "C:\Users\cbaldwin\Documents\teamTreehouseProjects\Python\project_11\backend\pugorugh\views.py", line 62, in get_object
+    return self.get_queryset().objects.get(id=1)
+AttributeError: 'QuerySet' object has no attribute 'objects'
+ERROR:django.request:Internal Server Error: /api/dog/5/liked/next/
+Traceback (most recent call last):
+  File "C:\Users\cbaldwin\Documents\teamTreehouseProjects\Python\project_11\p_11_venv\lib\site-packages\django\core\handlers\base.py", line 149, in get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\cbaldwin\Documents\teamTreehouseProjects\Python\project_11\p_11_venv\lib\site-packages\django\core\handlers\base.py", line 147, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\cbaldwin\Documents\teamTreehouseProjects\Python\project_11\p_11_venv\lib\site-packages\django\views\decorators\csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "C:\Users\cbaldwin\Documents\teamTreehouseProjects\Python\project_11\p_11_venv\lib\site-packages\django\views\generic\base.py", line 68, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\Users\cbaldwin\Documents\teamTreehouseProjects\Python\project_11\p_11_venv\lib\site-packages\rest_framework\views.py", line 466, in dispatch
+    response = self.handle_exception(exc)
+  File "C:\Users\cbaldwin\Documents\teamTreehouseProjects\Python\project_11\p_11_venv\lib\site-packages\rest_framework\views.py", line 463, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "C:\Users\cbaldwin\Documents\teamTreehouseProjects\Python\project_11\p_11_venv\lib\site-packages\rest_framework\generics.py", line 253, in get
+    return self.retrieve(request, *args, **kwargs)
+  File "C:\Users\cbaldwin\Documents\teamTreehouseProjects\Python\project_11\p_11_venv\lib\site-packages\rest_framework\mixins.py", line 56, in retrieve
+    instance = self.get_object()
+  File "C:\Users\cbaldwin\Documents\teamTreehouseProjects\Python\project_11\backend\pugorugh\views.py", line 62, in get_object
+    return self.get_queryset.objects.get(id=1)
+AttributeError: 'function' object has no attribute 'objects'
+ERROR:django.request:Internal Server Error: /api/dog/5/liked/next/
+Traceback (most recent call last):
+  File "C:\Users\cbaldwin\Documents\teamTreehouseProjects\Python\project_11\p_11_venv\lib\site-packages\django\core\handlers\base.py", line 149, in get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\cbaldwin\Documents\teamTreehouseProjects\Python\project_11\p_11_venv\lib\site-packages\django\core\handlers\base.py", line 147, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\cbaldwin\Documents\teamTreehouseProjects\Python\project_11\p_11_venv\lib\site-packages\django\views\decorators\csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "C:\Users\cbaldwin\Documents\teamTreehouseProjects\Python\project_11\p_11_venv\lib\site-packages\django\views\generic\base.py", line 68, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\Users\cbaldwin\Documents\teamTreehouseProjects\Python\project_11\p_11_venv\lib\site-packages\rest_framework\views.py", line 466, in dispatch
+    response = self.handle_exception(exc)
+  File "C:\Users\cbaldwin\Documents\teamTreehouseProjects\Python\project_11\p_11_venv\lib\site-packages\rest_framework\views.py", line 463, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "C:\Users\cbaldwin\Documents\teamTreehouseProjects\Python\project_11\p_11_venv\lib\site-packages\rest_framework\generics.py", line 253, in get
+    return self.retrieve(request, *args, **kwargs)
+  File "C:\Users\cbaldwin\Documents\teamTreehouseProjects\Python\project_11\p_11_venv\lib\site-packages\rest_framework\mixins.py", line 56, in retrieve
+    instance = self.get_object()
+  File "C:\Users\cbaldwin\Documents\teamTreehouseProjects\Python\project_11\backend\pugorugh\views.py", line 62, in get_object
+    return self.get_queryset.objects.get(id=1)
+AttributeError: 'function' object has no attribute 'objects'
+ERROR:django.request:Internal Server Error: /api/dog/1/liked/
+Traceback (most recent call last):
+  File "C:\Users\cbaldwin\Documents\teamTreehouseProjects\Python\project_11\p_11_venv\lib\site-packages\django\core\handlers\base.py", line 149, in get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\cbaldwin\Documents\teamTreehouseProjects\Python\project_11\p_11_venv\lib\site-packages\django\core\handlers\base.py", line 147, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\cbaldwin\Documents\teamTreehouseProjects\Python\project_11\p_11_venv\lib\site-packages\django\views\decorators\csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "C:\Users\cbaldwin\Documents\teamTreehouseProjects\Python\project_11\p_11_venv\lib\site-packages\django\views\generic\base.py", line 68, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\Users\cbaldwin\Documents\teamTreehouseProjects\Python\project_11\p_11_venv\lib\site-packages\rest_framework\views.py", line 468, in dispatch
+    self.response = self.finalize_response(request, response, *args, **kwargs)
+  File "C:\Users\cbaldwin\Documents\teamTreehouseProjects\Python\project_11\p_11_venv\lib\site-packages\rest_framework\views.py", line 396, in finalize_response
+    % type(response)
+AssertionError: Expected a `Response`, `HttpResponse` or `HttpStreamingResponse` to be returned from the view, but received a `<class 'NoneType'>`
+ERROR:django.request:Internal Server Error: /api/dog/19/undecided/next/
+Traceback (most recent call last):
+  File "C:\Users\cbaldwin\Documents\teamTreehouseProjects\Python\project_11\p_11_venv\lib\site-packages\rest_framework\fields.py", line 410, in get_attribute
+    return get_attribute(instance, self.source_attrs)
+  File "C:\Users\cbaldwin\Documents\teamTreehouseProjects\Python\project_11\p_11_venv\lib\site-packages\rest_framework\fields.py", line 83, in get_attribute
+    instance = getattr(instance, attr)
+AttributeError: 'int' object has no attribute 'name'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\cbaldwin\Documents\teamTreehouseProjects\Python\project_11\p_11_venv\lib\site-packages\django\core\handlers\base.py", line 149, in get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\cbaldwin\Documents\teamTreehouseProjects\Python\project_11\p_11_venv\lib\site-packages\django\core\handlers\base.py", line 147, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\cbaldwin\Documents\teamTreehouseProjects\Python\project_11\p_11_venv\lib\site-packages\django\views\decorators\csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "C:\Users\cbaldwin\Documents\teamTreehouseProjects\Python\project_11\p_11_venv\lib\site-packages\django\views\generic\base.py", line 68, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\Users\cbaldwin\Documents\teamTreehouseProjects\Python\project_11\p_11_venv\lib\site-packages\rest_framework\views.py", line 466, in dispatch
+    response = self.handle_exception(exc)
+  File "C:\Users\cbaldwin\Documents\teamTreehouseProjects\Python\project_11\p_11_venv\lib\site-packages\rest_framework\views.py", line 463, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "C:\Users\cbaldwin\Documents\teamTreehouseProjects\Python\project_11\p_11_venv\lib\site-packages\rest_framework\generics.py", line 253, in get
+    return self.retrieve(request, *args, **kwargs)
+  File "C:\Users\cbaldwin\Documents\teamTreehouseProjects\Python\project_11\p_11_venv\lib\site-packages\rest_framework\mixins.py", line 58, in retrieve
+    return Response(serializer.data)
+  File "C:\Users\cbaldwin\Documents\teamTreehouseProjects\Python\project_11\p_11_venv\lib\site-packages\rest_framework\serializers.py", line 507, in data
+    ret = super(Serializer, self).data
+  File "C:\Users\cbaldwin\Documents\teamTreehouseProjects\Python\project_11\p_11_venv\lib\site-packages\rest_framework\serializers.py", line 239, in data
+    self._data = self.to_representation(self.instance)
+  File "C:\Users\cbaldwin\Documents\teamTreehouseProjects\Python\project_11\p_11_venv\lib\site-packages\rest_framework\serializers.py", line 463, in to_representation
+    attribute = field.get_attribute(instance)
+  File "C:\Users\cbaldwin\Documents\teamTreehouseProjects\Python\project_11\p_11_venv\lib\site-packages\rest_framework\fields.py", line 427, in get_attribute
+    raise type(exc)(msg)
+AttributeError: Got AttributeError when attempting to get a value for field `name` on serializer `DogSerializer`.
+The serializer field might be named incorrectly and not match any attribute or key on the `int` instance.
+Original exception text was: 'int' object has no attribute 'name'.
+ERROR:django.request:Internal Server Error: /api/dog/-1/undecided/next/
+Traceback (most recent call last):
+  File "C:\Users\cbaldwin\Documents\teamTreehouseProjects\Python\project_11\p_11_venv\lib\site-packages\rest_framework\fields.py", line 410, in get_attribute
+    return get_attribute(instance, self.source_attrs)
+  File "C:\Users\cbaldwin\Documents\teamTreehouseProjects\Python\project_11\p_11_venv\lib\site-packages\rest_framework\fields.py", line 83, in get_attribute
+    instance = getattr(instance, attr)
+AttributeError: 'int' object has no attribute 'name'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\cbaldwin\Documents\teamTreehouseProjects\Python\project_11\p_11_venv\lib\site-packages\django\core\handlers\base.py", line 149, in get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\cbaldwin\Documents\teamTreehouseProjects\Python\project_11\p_11_venv\lib\site-packages\django\core\handlers\base.py", line 147, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\cbaldwin\Documents\teamTreehouseProjects\Python\project_11\p_11_venv\lib\site-packages\django\views\decorators\csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "C:\Users\cbaldwin\Documents\teamTreehouseProjects\Python\project_11\p_11_venv\lib\site-packages\django\views\generic\base.py", line 68, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\Users\cbaldwin\Documents\teamTreehouseProjects\Python\project_11\p_11_venv\lib\site-packages\rest_framework\views.py", line 466, in dispatch
+    response = self.handle_exception(exc)
+  File "C:\Users\cbaldwin\Documents\teamTreehouseProjects\Python\project_11\p_11_venv\lib\site-packages\rest_framework\views.py", line 463, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "C:\Users\cbaldwin\Documents\teamTreehouseProjects\Python\project_11\p_11_venv\lib\site-packages\rest_framework\generics.py", line 253, in get
+    return self.retrieve(request, *args, **kwargs)
+  File "C:\Users\cbaldwin\Documents\teamTreehouseProjects\Python\project_11\p_11_venv\lib\site-packages\rest_framework\mixins.py", line 58, in retrieve
+    return Response(serializer.data)
+  File "C:\Users\cbaldwin\Documents\teamTreehouseProjects\Python\project_11\p_11_venv\lib\site-packages\rest_framework\serializers.py", line 507, in data
+    ret = super(Serializer, self).data
+  File "C:\Users\cbaldwin\Documents\teamTreehouseProjects\Python\project_11\p_11_venv\lib\site-packages\rest_framework\serializers.py", line 239, in data
+    self._data = self.to_representation(self.instance)
+  File "C:\Users\cbaldwin\Documents\teamTreehouseProjects\Python\project_11\p_11_venv\lib\site-packages\rest_framework\serializers.py", line 463, in to_representation
+    attribute = field.get_attribute(instance)
+  File "C:\Users\cbaldwin\Documents\teamTreehouseProjects\Python\project_11\p_11_venv\lib\site-packages\rest_framework\fields.py", line 427, in get_attribute
+    raise type(exc)(msg)
+AttributeError: Got AttributeError when attempting to get a value for field `name` on serializer `DogSerializer`.
+The serializer field might be named incorrectly and not match any attribute or key on the `int` instance.
+Original exception text was: 'int' object has no attribute 'name'.
+ERROR:django.request:Internal Server Error: /api/dog/-1/undecided/next/
+Traceback (most recent call last):
+  File "C:\Users\cbaldwin\Documents\teamTreehouseProjects\Python\project_11\p_11_venv\lib\site-packages\rest_framework\fields.py", line 410, in get_attribute
+    return get_attribute(instance, self.source_attrs)
+  File "C:\Users\cbaldwin\Documents\teamTreehouseProjects\Python\project_11\p_11_venv\lib\site-packages\rest_framework\fields.py", line 83, in get_attribute
+    instance = getattr(instance, attr)
+AttributeError: 'int' object has no attribute 'name'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\cbaldwin\Documents\teamTreehouseProjects\Python\project_11\p_11_venv\lib\site-packages\django\core\handlers\base.py", line 149, in get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\cbaldwin\Documents\teamTreehouseProjects\Python\project_11\p_11_venv\lib\site-packages\django\core\handlers\base.py", line 147, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\cbaldwin\Documents\teamTreehouseProjects\Python\project_11\p_11_venv\lib\site-packages\django\views\decorators\csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "C:\Users\cbaldwin\Documents\teamTreehouseProjects\Python\project_11\p_11_venv\lib\site-packages\django\views\generic\base.py", line 68, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\Users\cbaldwin\Documents\teamTreehouseProjects\Python\project_11\p_11_venv\lib\site-packages\rest_framework\views.py", line 466, in dispatch
+    response = self.handle_exception(exc)
+  File "C:\Users\cbaldwin\Documents\teamTreehouseProjects\Python\project_11\p_11_venv\lib\site-packages\rest_framework\views.py", line 463, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "C:\Users\cbaldwin\Documents\teamTreehouseProjects\Python\project_11\p_11_venv\lib\site-packages\rest_framework\generics.py", line 253, in get
+    return self.retrieve(request, *args, **kwargs)
+  File "C:\Users\cbaldwin\Documents\teamTreehouseProjects\Python\project_11\p_11_venv\lib\site-packages\rest_framework\mixins.py", line 58, in retrieve
+    return Response(serializer.data)
+  File "C:\Users\cbaldwin\Documents\teamTreehouseProjects\Python\project_11\p_11_venv\lib\site-packages\rest_framework\serializers.py", line 507, in data
+    ret = super(Serializer, self).data
+  File "C:\Users\cbaldwin\Documents\teamTreehouseProjects\Python\project_11\p_11_venv\lib\site-packages\rest_framework\serializers.py", line 239, in data
+    self._data = self.to_representation(self.instance)
+  File "C:\Users\cbaldwin\Documents\teamTreehouseProjects\Python\project_11\p_11_venv\lib\site-packages\rest_framework\serializers.py", line 463, in to_representation
+    attribute = field.get_attribute(instance)
+  File "C:\Users\cbaldwin\Documents\teamTreehouseProjects\Python\project_11\p_11_venv\lib\site-packages\rest_framework\fields.py", line 427, in get_attribute
+    raise type(exc)(msg)
+AttributeError: Got AttributeError when attempting to get a value for field `name` on serializer `DogSerializer`.
+The serializer field might be named incorrectly and not match any attribute or key on the `int` instance.
+Original exception text was: 'int' object has no attribute 'name'.
+ERROR:django.request:Internal Server Error: /api/dog/4/undecided/next/
+Traceback (most recent call last):
+  File "C:\Users\cbaldwin\Documents\teamTreehouseProjects\Python\project_11\p_11_venv\lib\site-packages\rest_framework\fields.py", line 410, in get_attribute
+    return get_attribute(instance, self.source_attrs)
+  File "C:\Users\cbaldwin\Documents\teamTreehouseProjects\Python\project_11\p_11_venv\lib\site-packages\rest_framework\fields.py", line 83, in get_attribute
+    instance = getattr(instance, attr)
+AttributeError: 'int' object has no attribute 'name'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\cbaldwin\Documents\teamTreehouseProjects\Python\project_11\p_11_venv\lib\site-packages\django\core\handlers\base.py", line 149, in get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\cbaldwin\Documents\teamTreehouseProjects\Python\project_11\p_11_venv\lib\site-packages\django\core\handlers\base.py", line 147, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\cbaldwin\Documents\teamTreehouseProjects\Python\project_11\p_11_venv\lib\site-packages\django\views\decorators\csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "C:\Users\cbaldwin\Documents\teamTreehouseProjects\Python\project_11\p_11_venv\lib\site-packages\django\views\generic\base.py", line 68, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\Users\cbaldwin\Documents\teamTreehouseProjects\Python\project_11\p_11_venv\lib\site-packages\rest_framework\views.py", line 466, in dispatch
+    response = self.handle_exception(exc)
+  File "C:\Users\cbaldwin\Documents\teamTreehouseProjects\Python\project_11\p_11_venv\lib\site-packages\rest_framework\views.py", line 463, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "C:\Users\cbaldwin\Documents\teamTreehouseProjects\Python\project_11\p_11_venv\lib\site-packages\rest_framework\generics.py", line 253, in get
+    return self.retrieve(request, *args, **kwargs)
+  File "C:\Users\cbaldwin\Documents\teamTreehouseProjects\Python\project_11\p_11_venv\lib\site-packages\rest_framework\mixins.py", line 58, in retrieve
+    return Response(serializer.data)
+  File "C:\Users\cbaldwin\Documents\teamTreehouseProjects\Python\project_11\p_11_venv\lib\site-packages\rest_framework\serializers.py", line 507, in data
+    ret = super(Serializer, self).data
+  File "C:\Users\cbaldwin\Documents\teamTreehouseProjects\Python\project_11\p_11_venv\lib\site-packages\rest_framework\serializers.py", line 239, in data
+    self._data = self.to_representation(self.instance)
+  File "C:\Users\cbaldwin\Documents\teamTreehouseProjects\Python\project_11\p_11_venv\lib\site-packages\rest_framework\serializers.py", line 463, in to_representation
+    attribute = field.get_attribute(instance)
+  File "C:\Users\cbaldwin\Documents\teamTreehouseProjects\Python\project_11\p_11_venv\lib\site-packages\rest_framework\fields.py", line 427, in get_attribute
+    raise type(exc)(msg)
+AttributeError: Got AttributeError when attempting to get a value for field `name` on serializer `DogSerializer`.
+The serializer field might be named incorrectly and not match any attribute or key on the `int` instance.
+Original exception text was: 'int' object has no attribute 'name'.
+ERROR:django.request:Internal Server Error: /api/dog/-1/undecided/next/
+Traceback (most recent call last):
+  File "C:\Users\cbaldwin\Documents\teamTreehouseProjects\Python\project_11\p_11_venv\lib\site-packages\rest_framework\fields.py", line 410, in get_attribute
+    return get_attribute(instance, self.source_attrs)
+  File "C:\Users\cbaldwin\Documents\teamTreehouseProjects\Python\project_11\p_11_venv\lib\site-packages\rest_framework\fields.py", line 83, in get_attribute
+    instance = getattr(instance, attr)
+AttributeError: 'int' object has no attribute 'name'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\cbaldwin\Documents\teamTreehouseProjects\Python\project_11\p_11_venv\lib\site-packages\django\core\handlers\base.py", line 149, in get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\cbaldwin\Documents\teamTreehouseProjects\Python\project_11\p_11_venv\lib\site-packages\django\core\handlers\base.py", line 147, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\cbaldwin\Documents\teamTreehouseProjects\Python\project_11\p_11_venv\lib\site-packages\django\views\decorators\csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "C:\Users\cbaldwin\Documents\teamTreehouseProjects\Python\project_11\p_11_venv\lib\site-packages\django\views\generic\base.py", line 68, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\Users\cbaldwin\Documents\teamTreehouseProjects\Python\project_11\p_11_venv\lib\site-packages\rest_framework\views.py", line 466, in dispatch
+    response = self.handle_exception(exc)
+  File "C:\Users\cbaldwin\Documents\teamTreehouseProjects\Python\project_11\p_11_venv\lib\site-packages\rest_framework\views.py", line 463, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "C:\Users\cbaldwin\Documents\teamTreehouseProjects\Python\project_11\p_11_venv\lib\site-packages\rest_framework\generics.py", line 253, in get
+    return self.retrieve(request, *args, **kwargs)
+  File "C:\Users\cbaldwin\Documents\teamTreehouseProjects\Python\project_11\p_11_venv\lib\site-packages\rest_framework\mixins.py", line 58, in retrieve
+    return Response(serializer.data)
+  File "C:\Users\cbaldwin\Documents\teamTreehouseProjects\Python\project_11\p_11_venv\lib\site-packages\rest_framework\serializers.py", line 507, in data
+    ret = super(Serializer, self).data
+  File "C:\Users\cbaldwin\Documents\teamTreehouseProjects\Python\project_11\p_11_venv\lib\site-packages\rest_framework\serializers.py", line 239, in data
+    self._data = self.to_representation(self.instance)
+  File "C:\Users\cbaldwin\Documents\teamTreehouseProjects\Python\project_11\p_11_venv\lib\site-packages\rest_framework\serializers.py", line 463, in to_representation
+    attribute = field.get_attribute(instance)
+  File "C:\Users\cbaldwin\Documents\teamTreehouseProjects\Python\project_11\p_11_venv\lib\site-packages\rest_framework\fields.py", line 427, in get_attribute
+    raise type(exc)(msg)
+AttributeError: Got AttributeError when attempting to get a value for field `name` on serializer `DogSerializer`.
+The serializer field might be named incorrectly and not match any attribute or key on the `int` instance.
+Original exception text was: 'int' object has no attribute 'name'.
+ERROR:django.request:Internal Server Error: /api/dog/6/undecided/next/
+Traceback (most recent call last):
+  File "C:\Users\cbaldwin\Documents\teamTreehouseProjects\Python\project_11\p_11_venv\lib\site-packages\rest_framework\fields.py", line 410, in get_attribute
+    return get_attribute(instance, self.source_attrs)
+  File "C:\Users\cbaldwin\Documents\teamTreehouseProjects\Python\project_11\p_11_venv\lib\site-packages\rest_framework\fields.py", line 83, in get_attribute
+    instance = getattr(instance, attr)
+AttributeError: 'int' object has no attribute 'name'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\cbaldwin\Documents\teamTreehouseProjects\Python\project_11\p_11_venv\lib\site-packages\django\core\handlers\base.py", line 149, in get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\cbaldwin\Documents\teamTreehouseProjects\Python\project_11\p_11_venv\lib\site-packages\django\core\handlers\base.py", line 147, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\cbaldwin\Documents\teamTreehouseProjects\Python\project_11\p_11_venv\lib\site-packages\django\views\decorators\csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "C:\Users\cbaldwin\Documents\teamTreehouseProjects\Python\project_11\p_11_venv\lib\site-packages\django\views\generic\base.py", line 68, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\Users\cbaldwin\Documents\teamTreehouseProjects\Python\project_11\p_11_venv\lib\site-packages\rest_framework\views.py", line 466, in dispatch
+    response = self.handle_exception(exc)
+  File "C:\Users\cbaldwin\Documents\teamTreehouseProjects\Python\project_11\p_11_venv\lib\site-packages\rest_framework\views.py", line 463, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "C:\Users\cbaldwin\Documents\teamTreehouseProjects\Python\project_11\p_11_venv\lib\site-packages\rest_framework\generics.py", line 253, in get
+    return self.retrieve(request, *args, **kwargs)
+  File "C:\Users\cbaldwin\Documents\teamTreehouseProjects\Python\project_11\p_11_venv\lib\site-packages\rest_framework\mixins.py", line 58, in retrieve
+    return Response(serializer.data)
+  File "C:\Users\cbaldwin\Documents\teamTreehouseProjects\Python\project_11\p_11_venv\lib\site-packages\rest_framework\serializers.py", line 507, in data
+    ret = super(Serializer, self).data
+  File "C:\Users\cbaldwin\Documents\teamTreehouseProjects\Python\project_11\p_11_venv\lib\site-packages\rest_framework\serializers.py", line 239, in data
+    self._data = self.to_representation(self.instance)
+  File "C:\Users\cbaldwin\Documents\teamTreehouseProjects\Python\project_11\p_11_venv\lib\site-packages\rest_framework\serializers.py", line 463, in to_representation
+    attribute = field.get_attribute(instance)
+  File "C:\Users\cbaldwin\Documents\teamTreehouseProjects\Python\project_11\p_11_venv\lib\site-packages\rest_framework\fields.py", line 427, in get_attribute
+    raise type(exc)(msg)
+AttributeError: Got AttributeError when attempting to get a value for field `name` on serializer `DogSerializer`.
+The serializer field might be named incorrectly and not match any attribute or key on the `int` instance.
+Original exception text was: 'int' object has no attribute 'name'.
+ERROR:django.request:Internal Server Error: /api/dog/1/undecided/next/
+Traceback (most recent call last):
+  File "C:\Users\cbaldwin\Documents\teamTreehouseProjects\Python\project_11\p_11_venv\lib\site-packages\rest_framework\fields.py", line 410, in get_attribute
+    return get_attribute(instance, self.source_attrs)
+  File "C:\Users\cbaldwin\Documents\teamTreehouseProjects\Python\project_11\p_11_venv\lib\site-packages\rest_framework\fields.py", line 83, in get_attribute
+    instance = getattr(instance, attr)
+AttributeError: 'int' object has no attribute 'name'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\cbaldwin\Documents\teamTreehouseProjects\Python\project_11\p_11_venv\lib\site-packages\django\core\handlers\base.py", line 149, in get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\cbaldwin\Documents\teamTreehouseProjects\Python\project_11\p_11_venv\lib\site-packages\django\core\handlers\base.py", line 147, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\cbaldwin\Documents\teamTreehouseProjects\Python\project_11\p_11_venv\lib\site-packages\django\views\decorators\csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "C:\Users\cbaldwin\Documents\teamTreehouseProjects\Python\project_11\p_11_venv\lib\site-packages\django\views\generic\base.py", line 68, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\Users\cbaldwin\Documents\teamTreehouseProjects\Python\project_11\p_11_venv\lib\site-packages\rest_framework\views.py", line 466, in dispatch
+    response = self.handle_exception(exc)
+  File "C:\Users\cbaldwin\Documents\teamTreehouseProjects\Python\project_11\p_11_venv\lib\site-packages\rest_framework\views.py", line 463, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "C:\Users\cbaldwin\Documents\teamTreehouseProjects\Python\project_11\p_11_venv\lib\site-packages\rest_framework\generics.py", line 253, in get
+    return self.retrieve(request, *args, **kwargs)
+  File "C:\Users\cbaldwin\Documents\teamTreehouseProjects\Python\project_11\p_11_venv\lib\site-packages\rest_framework\mixins.py", line 58, in retrieve
+    return Response(serializer.data)
+  File "C:\Users\cbaldwin\Documents\teamTreehouseProjects\Python\project_11\p_11_venv\lib\site-packages\rest_framework\serializers.py", line 507, in data
+    ret = super(Serializer, self).data
+  File "C:\Users\cbaldwin\Documents\teamTreehouseProjects\Python\project_11\p_11_venv\lib\site-packages\rest_framework\serializers.py", line 239, in data
+    self._data = self.to_representation(self.instance)
+  File "C:\Users\cbaldwin\Documents\teamTreehouseProjects\Python\project_11\p_11_venv\lib\site-packages\rest_framework\serializers.py", line 463, in to_representation
+    attribute = field.get_attribute(instance)
+  File "C:\Users\cbaldwin\Documents\teamTreehouseProjects\Python\project_11\p_11_venv\lib\site-packages\rest_framework\fields.py", line 427, in get_attribute
+    raise type(exc)(msg)
+AttributeError: Got AttributeError when attempting to get a value for field `name` on serializer `DogSerializer`.
+The serializer field might be named incorrectly and not match any attribute or key on the `int` instance.
+Original exception text was: 'int' object has no attribute 'name'.

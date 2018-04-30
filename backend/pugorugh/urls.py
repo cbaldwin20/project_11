@@ -13,20 +13,18 @@ urlpatterns = format_suffix_patterns([
     url(r'^api/user/$', views.UserRegisterView.as_view(), name='register-user'),
 
 
-    # get the next liked/disliked/undecided dog
-    url(r'^api/dog/<pk>/liked/next/$', views.RetrieveUpdateDog.as_view()),
-    url(r'^api/dog/<pk>/disliked/next/$', views.RetrieveUpdateDog.as_view()),
-    url(r'^api/dog/<pk>/undecided/next/$', views.RetrieveUpdateDog.as_view()),
+    # these are all the 'GET' requests, liked/disliked/undecided
+    url(r'^api/dog/(?P<pk>-?\d+)/(?P<decision>[-\w]+)/next/$', views.RetrieveUpdateDog.as_view()),
+    
 
-    # change the dog's status
-    url(r'^api/dog/<pk>/liked/$', views.RetrieveUpdateDog.as_view()),
-    url(r'^api/dog/<pk>/disliked/$', views.RetrieveUpdateDog.as_view()),
-    url(r'^api/dog/<pk>/undecided/$', views.RetrieveUpdateDog.as_view()),
+    # these are all the 'PUT' requests, liked/disliked/undecided
+    url(r'^api/dog/(?P<pk>-?\d+)/(?P<decision>[-\w]+)/$', views.RetrieveUpdateDog.as_view()),
+    
     
 
     # change or set user preferences
     url(r'^api/user/preferences/$', views.RetrieveUpdateUserPref.as_view()),
-    url(r'^practice/<pk>/$', views.Practice.as_view()),
+    
 
     url(r'^favicon\.ico$',
         RedirectView.as_view(
