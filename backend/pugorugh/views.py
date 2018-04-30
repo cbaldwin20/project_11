@@ -58,9 +58,15 @@ class RetrieveUpdateDog(generics.RetrieveUpdateAPIView):
     def get_object(self, *args, **kwargs):
         response = self.kwargs.get('decision')
         pk = self.kwargs.get('pk')
+
+        userpref = models.UserPref.objects.get(user=self.request.user)
+        age = userpref.age.split(",")
+        gender = userpref.gender.split(",")
+        size = userpref.size.split(",")
         
         if response == 'liked':
-            x = self.get_queryset().filter(dog__status='l')
+            x = self.get_queryset().filter(dog__status='l', age_category__in=age, gender__in=gender, size__in=size)
+            
             if x:
                 try:
                     y = x.filter(id__gt=pk)[:1].get()
@@ -75,7 +81,8 @@ class RetrieveUpdateDog(generics.RetrieveUpdateAPIView):
                 return status.HTTP_404_NOT_FOUND
         
         elif response == 'disliked':
-            x = self.get_queryset().filter(dog__status='d')
+            x = self.get_queryset().filter(dog__status='d', age_category__in=age, gender__in=gender, size__in=size)
+            
             if x:
                 try:
                     y = x.filter(id__gt=pk)[:1].get()
@@ -90,7 +97,8 @@ class RetrieveUpdateDog(generics.RetrieveUpdateAPIView):
                 return status.HTTP_404_NOT_FOUND
         
         elif response == 'undecided':
-            x = self.get_queryset().exclude(dog__status__in=['l', 'd'])
+            x = self.get_queryset().filter(age_category__in=age, gender__in=gender, size__in=size).exclude(dog__status__in=['l', 'd'])
+            
             if x:
                 try:
                     y = x.filter(id__gt=pk)[:1].get()
