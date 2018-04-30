@@ -5,28 +5,28 @@ from django.views.generic.base import RedirectView
 from rest_framework.urlpatterns import format_suffix_patterns
 from rest_framework.authtoken.views import obtain_auth_token
 
-from pugorugh.views import UserRegisterView, RetrieveUpdateDestroyDog, RetrieveUpdateUserPref
+from pugorugh import views
 
 # API endpoints
 urlpatterns = format_suffix_patterns([
     url(r'^api/user/login/$', obtain_auth_token, name='login-user'),
-    url(r'^api/user/$', UserRegisterView.as_view(), name='register-user'),
+    url(r'^api/user/$', views.UserRegisterView.as_view(), name='register-user'),
 
 
     # get the next liked/disliked/undecided dog
-    url(r'^api/dog/<pk>/liked/next/$', RetrieveUpdateDestroyDog.as_view()),
-    url(r'^api/dog/<pk>/disliked/next/$', RetrieveUpdateDestroyDog.as_view()),
-    url(r'^api/dog/<pk>/undecided/next/$', RetrieveUpdateDestroyDog.as_view()),
+    url(r'^api/dog/<pk>/liked/next/$', views.RetrieveUpdateDog.as_view()),
+    url(r'^api/dog/<pk>/disliked/next/$', views.RetrieveUpdateDog.as_view()),
+    url(r'^api/dog/<pk>/undecided/next/$', views.RetrieveUpdateDog.as_view()),
 
     # change the dog's status
-    url(r'^api/dog/<pk>/liked/$', RetrieveUpdateDestroyDog.as_view()),
-    url(r'^api/dog/<pk>/disliked/$', RetrieveUpdateDestroyDog.as_view()),
-    url(r'^api/dog/<pk>/undecided/$', RetrieveUpdateDestroyDog.as_view()),
+    url(r'^api/dog/<pk>/liked/$', views.RetrieveUpdateDog.as_view()),
+    url(r'^api/dog/<pk>/disliked/$', views.RetrieveUpdateDog.as_view()),
+    url(r'^api/dog/<pk>/undecided/$', views.RetrieveUpdateDog.as_view()),
     
 
     # change or set user preferences
-    url(r'^api/user/preferences/$', RetrieveUpdateUserPref.as_view()),
-    
+    url(r'^api/user/preferences/$', views.RetrieveUpdateUserPref.as_view()),
+    url(r'^practice/<pk>/$', views.Practice.as_view()),
 
     url(r'^favicon\.ico$',
         RedirectView.as_view(

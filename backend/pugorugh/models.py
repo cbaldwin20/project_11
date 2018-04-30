@@ -20,11 +20,12 @@ class Dog(models.Model):
 
 
 class UserDog(models.Model):
-    user = models.ForeignKey(User)
-    dog = models.ForeignKey(Dog)
+    user = models.ForeignKey(User, related_name="user")
+    dog = models.ForeignKey(Dog, related_name="dog")
     status = models.CharField(
         max_length=255,
-        help_text='“l” for liked, “d” for disliked')
+        help_text='“l” for liked, “d” for disliked',
+        default="")
 
     def __str__(self):
         return self.user

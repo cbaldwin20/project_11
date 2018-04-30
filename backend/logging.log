@@ -791,3 +791,63 @@ Traceback (most recent call last):
   File "C:\Users\cbaldwin\Documents\teamTreehouseProjects\Python\project_11\p_11_venv\lib\site-packages\django\db\backends\sqlite3\base.py", line 323, in execute
     return Database.Cursor.execute(self, query, params)
 django.db.utils.OperationalError: no such table: pugorugh_userpref
+WARNING:django.request:Not Found: /api/dog/-1/undecided/next/
+WARNING:django.request:Not Found: /api/dog/-1/undecided/next/
+WARNING:django.request:Not Found: /api/dog/-1/undecided/next/
+WARNING:django.request:Not Found: /api/dog/-1/undecided/next/
+WARNING:django.request:Not Found: /api/dog/-1/undecided/next/
+WARNING:django.request:Not Found: /api/dog/-1/undecided/next/
+WARNING:django.request:Not Found: /api/dog/-1/undecided/next/
+WARNING:django.request:Not Found: /api/dog/-1/undecided/next/
+WARNING:django.request:Not Found: /api/dog/-1/undecided/next/
+WARNING:django.request:Not Found: /api/dog/-1/undecided/next/
+WARNING:django.request:Not Found: /api/dog/-1/undecided/next/
+WARNING:django.request:Not Found: /api/dog/-1/undecided/next/
+WARNING:django.request:Not Found: /api/dog/-1/undecided/next/
+WARNING:django.request:Not Found: /api/dog/-1/undecided/next/
+WARNING:django.request:Not Found: /api/dog/-1/undecided/next/
+WARNING:django.request:Not Found: /api/dog/-1/undecided/next/
+WARNING:django.request:Not Found: /api/dog/-1/undecided/next/
+WARNING:py.warnings:C:\Users\cbaldwin\Documents\teamTreehouseProjects\Python\project_11\p_11_venv\lib\site-packages\django\core\management\commands\loaddata.py:243: UserWarning: No fixture named 'data_import' found.
+  warnings.warn("No fixture named '%s' found." % fixture_name)
+
+WARNING:django.request:Not Found: /api/dog/-1/undecided/next/
+WARNING:django.request:Not Found: /api/dog/-1/undecided/next/
+WARNING:django.request:Not Found: /api/dog/-1/undecided/next/
+WARNING:django.request:Not Found: /api/dog/-1/undecided/next/
+WARNING:django.request:Not Found: /api/dog/-1/liked/next/
+WARNING:django.request:Not Found: /api/dog/-1/disliked/next/
+WARNING:django.request:Not Found: /api/dog/-1/liked/next/
+WARNING:django.request:Not Found: /api/dog/-1/undecided/next/
+WARNING:django.request:Not Found: /api/dog/-1/undecided/next/
+WARNING:django.request:Not Found: /api/dog/-1/undecided/next/
+WARNING:django.request:Not Found: /api/dog/-1/undecided/next/
+WARNING:django.request:Not Found: /api/dog/-1/undecided/next/
+WARNING:django.request:Not Found: /api/dog/-1/undecided/next/
+WARNING:django.request:Not Found: /api/dog/-1/undecided/next/
+WARNING:django.request:Not Found: /api/dog/-1/undecided/next/
+WARNING:django.request:Not Found: /api/dog/-1/undecided/next/
+WARNING:django.request:Not Found: /api/dog/-1/undecided/next/
+WARNING:django.request:Not Found: /api/dog/-1/liked/next/
+WARNING:django.request:Not Found: /api/dog/-1/disliked/next/
+WARNING:django.request:Not Found: /api/dog/-1/undecided/next/
+WARNING:django.request:Not Found: /api/dog/-1/undecided/next/
+WARNING:django.request:Not Found: /api/dog/-1/undecided/next/
+WARNING:django.request:Not Found: /api/dog/-1/undecided/next/
+WARNING:django.request:Not Found: /api/dog/-1/undecided/next/
+WARNING:django.request:Not Found: /api/dog/1/undecided/next/
+WARNING:django.request:Not Found: /api/dog/1/undecided/next/
+WARNING:django.request:Not Found: /api/dog/1/undecided/next/
+WARNING:django.request:Not Found: /api/dog/1/undecided/next/
+WARNING:django.request:Not Found: /practice/1/
+WARNING:django.request:Not Found: /practice/1/
+WARNING:django.request:Not Found: /practice/1/
+WARNING:django.request:Not Found: /practice/1/
+WARNING:django.request:Not Found: /practice/1/
+WARNING:django.request:Not Found: /practice/1/
+WARNING:django.request:Not Found: /practice/1/
+WARNING:django.request:Not Found: /practice/1/
+WARNING:django.request:Not Found: /practice/1/
+WARNING:django.request:Not Found: /practice/1/
+WARNING:django.request:Not Found: /api/dog/1/undecided/next/
+WARNING:django.request:Not Found: /api/dog/1/undecided/next/
