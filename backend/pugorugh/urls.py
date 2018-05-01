@@ -26,6 +26,8 @@ urlpatterns = format_suffix_patterns([
     url(r'^api/user/preferences/$', views.RetrieveUpdateUserPref.as_view()),
 
     url(r'^api/dog/create/$', views.DogCreateAPIView.as_view()),
+
+    url(r'^file/upload/$', views.FileView.as_view(), name='file-upload'),
     
 
     url(r'^favicon\.ico$',

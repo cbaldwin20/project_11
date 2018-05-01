@@ -59,3 +59,7 @@ class UserPref(models.Model):
 
     def __str__(self):
         return self.user
+
+
+class File(models.Model):
+    file = models.FileField(blank=False, null=False)

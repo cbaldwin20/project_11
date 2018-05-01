@@ -141,3 +141,7 @@ STATIC_URL = '/static/'
 STATICFILES_DIRS = (
     os.path.join(os.path.dirname(__file__), '../pugorugh/static/'),
 )
+
+
+MEDIA_URL = '/static/images/dogs/'
+MEDIA_ROOT = os.path.join(os.path.dirname(__file__), '../pugorugh/static/images/dogs')

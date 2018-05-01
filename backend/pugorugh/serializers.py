@@ -42,3 +42,10 @@ class UserPrefSerializer(serializers.ModelSerializer):
             'gender',
             'size')
         model = models.UserPref
+
+
+
+class FileSerializer(serializers.ModelSerializer):
+  class Meta():
+    model = models.File
+    fields = ('file',)
