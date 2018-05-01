@@ -14,16 +14,18 @@ urlpatterns = format_suffix_patterns([
 
 
     # these are all the 'GET' requests, liked/disliked/undecided
-    url(r'^api/dog/(?P<pk>-?\d+)/(?P<decision>[-\w]+)/next/$', views.RetrieveUpdateDog.as_view()),
+    url(r'^api/dog/(?P<pk>-?\d+)/(?P<decision>liked|disliked|undecided)/next/$', views.RetrieveUpdateDestroyDog.as_view()),
     
 
-    # these are all the 'PUT' requests, liked/disliked/undecided
-    url(r'^api/dog/(?P<pk>-?\d+)/(?P<decision>[-\w]+)/$', views.RetrieveUpdateDog.as_view()),
+    # these are all the 'PUT' requests, liked/disliked/undecided/delete
+    url(r'^api/dog/(?P<pk>-?\d+)/(?P<decision>liked|disliked|undecided|delete)/$', views.RetrieveUpdateDestroyDog.as_view()),
     
     
 
     # change or set user preferences
     url(r'^api/user/preferences/$', views.RetrieveUpdateUserPref.as_view()),
+
+    url(r'^api/dog/create/$', views.DogCreateAPIView.as_view()),
     
 
     url(r'^favicon\.ico$',

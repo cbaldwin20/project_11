@@ -1,5 +1,5 @@
 super user username and password: cbaldwin4
-token for user cbaldwin: 9f4c4c3e35ccc995e5bacac055f9ba55356eaf30
+token for user cbaldwin: 1354cc1cba98a04e34599fe1605e8d1b26e1bbce
 
 
 # Pug or Ugh
