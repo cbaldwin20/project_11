@@ -30,7 +30,6 @@ class UserRegisterView(CreateAPIView):
 class DogCreateAPIView(CreateAPIView):
     """Creates a dog instance."""
 
-    permission_classes = (IsAuthenticated,)
     queryset = models.Dog.objects.all()
     serializer_class = serializers.DogSerializer
 
@@ -38,7 +37,6 @@ class DogCreateAPIView(CreateAPIView):
 class RetrieveUpdateDestroyDog(generics.RetrieveUpdateDestroyAPIView):
     """Can get, update, or delete a dog instance."""
 
-    permission_classes = (IsAuthenticated,)
     queryset = models.Dog.objects.all()
     serializer_class = serializers.DogSerializer
 
@@ -154,7 +152,6 @@ class RetrieveUpdateDestroyDog(generics.RetrieveUpdateDestroyAPIView):
 class RetrieveUpdateUserPref(generics.RetrieveUpdateAPIView):
     """Get and update the user preferences."""
 
-    permission_classes = (IsAuthenticated,)
     queryset = models.UserPref.objects.all()
     serializer_class = serializers.UserPrefSerializer
 
@@ -174,7 +171,6 @@ class RetrieveUpdateUserPref(generics.RetrieveUpdateAPIView):
 class FileView(APIView):
     """Add an image to the static/images/dogs folder."""
 
-    permission_classes = (IsAuthenticated,)
     parser_classes = (MultiPartParser, FormParser)
 
     def post(self, request, *args, **kwargs):
