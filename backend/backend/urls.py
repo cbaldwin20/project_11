@@ -1,4 +1,4 @@
-"""backend URL Configuration
+"""backend URL Configuration.
 
 The `urlpatterns` list routes URLs to views. For more information please see:
     https://docs.djangoproject.com/en/1.9/topics/http/urls/
@@ -16,25 +16,16 @@ Including another URLconf
 from rest_framework.authtoken.views import obtain_auth_token
 from django.conf.urls import url, include
 from django.contrib import admin
-
-from rest_framework.authtoken import views
-from rest_framework import routers
-from pugorugh import views 
-
 from django.conf import settings
 from django.conf.urls.static import static
 
-
-
 urlpatterns = [
-
     url(r'^admin/', admin.site.urls),
-    
     url(r'^api-auth/', include('rest_framework.urls',
                                namespace='rest_framework')),
     url(r'^api-token-auth/', obtain_auth_token),
     url(r'^', include('pugorugh.urls')),
-    
 ]
 if settings.DEBUG:
-  urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
+    urlpatterns += static(settings.MEDIA_URL,
+                          document_root=settings.MEDIA_ROOT)

@@ -92,16 +92,20 @@ DATABASES = {
 
 AUTH_PASSWORD_VALIDATORS = [
     # {
-    #     'NAME': 'django.contrib.auth.password_validation.UserAttributeSimilarityValidator',
+    #     'NAME':
+    # 'django.contrib.auth.password_validation.UserAttributeSimilarityValidator',
     # },
     # {
-    #     'NAME': 'django.contrib.auth.password_validation.MinimumLengthValidator',
+    #     'NAME':
+    # 'django.contrib.auth.password_validation.MinimumLengthValidator',
     # },
     # {
-    #     'NAME': 'django.contrib.auth.password_validation.CommonPasswordValidator',
+    #     'NAME':
+    # 'django.contrib.auth.password_validation.CommonPasswordValidator',
     # },
     # {
-    #     'NAME': 'django.contrib.auth.password_validation.NumericPasswordValidator',
+    #     'NAME':
+    # 'django.contrib.auth.password_validation.NumericPasswordValidator',
     # },
 ]
 
@@ -144,4 +148,5 @@ STATICFILES_DIRS = (
 
 
 MEDIA_URL = '/static/images/dogs/'
-MEDIA_ROOT = os.path.join(os.path.dirname(__file__), '../pugorugh/static/images/dogs')
+MEDIA_ROOT = os.path.join(os.path.dirname(__file__),
+                          '../pugorugh/static/images/dogs')
