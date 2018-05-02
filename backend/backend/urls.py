@@ -24,7 +24,7 @@ urlpatterns = [
     url(r'^api-auth/', include('rest_framework.urls',
                                namespace='rest_framework')),
     url(r'^api-token-auth/', obtain_auth_token),
-    url(r'^', include('pugorugh.urls')),
+    url(r'^', include('pugorugh.urls', namespace='backend')),
 ]
 if settings.DEBUG:
     urlpatterns += static(settings.MEDIA_URL,

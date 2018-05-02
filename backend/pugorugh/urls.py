@@ -17,17 +17,18 @@ urlpatterns = format_suffix_patterns([
 
     # these are all the 'GET' requests, liked/disliked/undecided
     url(r'^api/dog/(?P<pk>-?\d+)/(?P<decision>liked|disliked|undecided)/next/$',
-        views.RetrieveUpdateDestroyDog.as_view()),
+        views.RetrieveUpdateDestroyDog.as_view(), name="next"),
 
     # these are all the 'PUT' requests, liked/disliked/undecided/delete
     url(r'^api/dog/(?P<pk>-?\d+)/(?P<decision>liked|disliked|undecided|delete)/$',
-        views.RetrieveUpdateDestroyDog.as_view()),
+        views.RetrieveUpdateDestroyDog.as_view(), name="update"),
 
     # change or set user preferences
-    url(r'^api/user/preferences/$', views.RetrieveUpdateUserPref.as_view()),
+    url(r'^api/user/preferences/$', views.RetrieveUpdateUserPref.as_view(),
+        name='userpref'),
 
     # use this to create a dog instance.
-    url(r'^api/dog/create/$', views.DogCreateAPIView.as_view()),
+    url(r'^api/dog/create/$', views.DogCreateAPIView.as_view(), name='create'),
 
     # use this url to upload an image.
     url(r'^file/upload/$', views.FileView.as_view(), name='file-upload'),

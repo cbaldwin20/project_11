@@ -40,6 +40,7 @@ class Dog(models.Model):
 class UserDog(models.Model):
     """
     instance to determine whether a user
+
     liked, disliked, or undecided a dog instance.
 
     """

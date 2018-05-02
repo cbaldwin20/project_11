@@ -2,9 +2,8 @@
 
 from django.core.exceptions import ObjectDoesNotExist
 from django.contrib.auth import get_user_model
-from rest_framework import generics
+from rest_framework import generics, permissions
 from rest_framework.response import Response
-from rest_framework import permissions
 from rest_framework.generics import CreateAPIView
 from django.shortcuts import get_object_or_404
 from rest_framework.views import APIView
