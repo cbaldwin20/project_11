@@ -50,7 +50,12 @@ class UserDog(models.Model):
     status = models.CharField(
         max_length=255,
         help_text='“l” for liked, “d” for disliked')
-    
+    amount_changed = models.IntegerField(default=0)
+
+    def save(self, *args, **kwarg):
+        """Set the 'age_category' whenever the instance is saved."""
+        self.amount_changed += 1
+        super(UserDog, self).save(*args, **kwarg)
 
 
 class UserPref(models.Model):
@@ -70,8 +75,12 @@ class UserPref(models.Model):
         max_length=255,
         help_text='“s” for small, “m” for medium, '
         '“l” for large, “xl” for extra large')
+    amount_changed = models.IntegerField(default=0)
 
-    
+    def save(self, *args, **kwarg):
+        """Set the 'age_category' whenever the instance is saved."""
+        self.amount_changed += 1
+        super(UserPref, self).save(*args, **kwarg)
 
 
 class File(models.Model):
