@@ -50,6 +50,7 @@ class UserDog(models.Model):
     status = models.CharField(
         max_length=255,
         help_text='“l” for liked, “d” for disliked')
+    
 
 
 class UserPref(models.Model):
@@ -69,6 +70,8 @@ class UserPref(models.Model):
         max_length=255,
         help_text='“s” for small, “m” for medium, '
         '“l” for large, “xl” for extra large')
+
+    
 
 
 class File(models.Model):

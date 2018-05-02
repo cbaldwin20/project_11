@@ -41,6 +41,14 @@ class DogSerializer(serializers.ModelSerializer):
             'id')
         model = models.Dog
 
+    def validate(self, data):
+        gender = data.get("gender", None)
+        size = data.get("size", None)
+        if gender not in ['m', 'f', 'u']:
+            raise serializers.ValidationError("Gender must be either 'm' for male, 'f' for female, or 'u' for unknown.")
+        elif size not in ['s', 'm', 'l', 'xl', 'u']:
+            raise serializers.ValidationError("Size must be 's' for small, 'm' for medium, 'l' for large, 'xl' for extra large, or 'u' for unknown.")
+        return data
 
 class UserPrefSerializer(serializers.ModelSerializer):
     """The serializer for the UserPref model."""
@@ -53,6 +61,24 @@ class UserPrefSerializer(serializers.ModelSerializer):
             'gender',
             'size')
         model = models.UserPref
+
+    def validate(self, data):
+        age = data.get("age", None)
+        age = age.split(",")
+        size = data.get("size", None)
+        size = size.split(",")
+        gender = data.get("gender", None)
+        gender = gender.split(",")
+        for i in age:
+            if i not in ['b', 'y', 'a', 's']:
+                raise serializers.ValidationError("Age must be either 'b' for baby, 'y' for young, 'a' for adult, or 's' for senior. Can do multiple with commas, ex: a,y,e")
+        for i in size:
+            if i not in ['s', 'm', 'l', 'xl']:
+                raise serializers.ValidationError("Size must be either 's' for small, 'm' for medium, 'l' for large, or 'xl' for extra large. Can do multiple with commas, ex: s,l,xl")
+        for i in gender:
+            if i not in ['m', 'f']:
+                raise serializers.ValidationError("Gender must be either 'm' for male, or 'f' for female. Can have both using commas, ex: m,f")
+        return data
 
 
 class FileSerializer(serializers.ModelSerializer):
