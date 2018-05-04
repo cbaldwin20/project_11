@@ -1,18 +1,18 @@
-super user username: cbaldwin10
-super user password: cbaldwin10
-
-Staff said the extra credit did not need
-to be done with the html as long as it works
-with POSTMAN.
-
-Upload an image with the file/upload/
-Create a new dog instance with api/dog/create/
-Delete with  url(r'^api/dog/(?P<pk>-?\d+)/(
-	?P<decision>liked|disliked|undecided|delete)/$'
-
-Dog instance 'image_filename' needs to match
-uploaded image's 'file' field. 
-
+super user username: cbaldwin10  
+super user password: cbaldwin10  
+  
+Staff said the extra credit did not need  
+to be done with the html as long as it works  
+with POSTMAN.  
+  
+Upload an image with the file/upload/  
+Create a new dog instance with api/dog/create/  
+Delete with  url(r'^api/dog/(?P<pk>-?\d+)/(  
+	?P<decision>liked|disliked|undecided|delete)/$'  
+  
+Dog instance 'image_filename' needs to match  
+uploaded image's 'file' field.   
+  
 
 # Pug or Ugh
 
