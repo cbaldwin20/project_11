@@ -14,7 +14,8 @@ Delete with  url(r'^api/dog/(?P<pk>-?\d+)/(
     
 Dog instance 'image_filename' needs to match    
 uploaded image's 'file' field.     
-    
+  ex: Dog.image_filename = 'bulldog.jpg'
+      File.file = 'bulldog.jpg'  
 
 # Pug or Ugh
 

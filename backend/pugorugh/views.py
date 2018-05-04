@@ -93,6 +93,8 @@ class RetrieveUpdateDestroyDog(generics.RetrieveUpdateDestroyAPIView):
                 return status.HTTP_404_NOT_FOUND
 
         elif response == 'undecided':
+            # if this user is new, then create a UserDog
+            # instance for every Dog instance.
             if pk < 0:
                 any_userdogs = models.UserDog.objects.filter(
                     user=self.request.user).exists()
@@ -106,8 +108,8 @@ class RetrieveUpdateDestroyDog(generics.RetrieveUpdateDestroyAPIView):
 
             undecided_dogs = self.get_queryset().filter(
                 age_category__in=age, gender__in=gender,
-                size__in=size, dog__user=self.request.user).exclude(
-                dog__status__in=['l', 'd'])
+                size__in=size, dog__user=self.request.user,
+                dog__status='u')
 
             # now that we have the filtered dog instances
             # based on preferences,
