@@ -43,6 +43,7 @@ class RetrieveUpdateDestroyDog(generics.RetrieveUpdateDestroyAPIView):
         # getting the parameters from the url
         response = self.kwargs.get('decision')
         pk = self.kwargs.get('pk')
+        pk = int(pk)
 
         # Get the variables to be used in filtering below.
         userpref = models.UserPref.objects.get(user=self.request.user)
@@ -51,59 +52,75 @@ class RetrieveUpdateDestroyDog(generics.RetrieveUpdateDestroyAPIView):
         size = userpref.size.split(",")
 
         if response == 'liked':
-            x = self.get_queryset().filter(
+            liked_dogs = self.get_queryset().filter(
                 dog__status='l', age_category__in=age,
-                gender__in=gender, size__in=size)
+                gender__in=gender, size__in=size,
+                dog__user=self.request.user)
 
             # now that we have the filtered dog instances
             # based on preferences,
             # we get the one that either is next in line
             # or if there is no next then go to the first
             # one.
-            if x:
+            if liked_dogs:
                 try:
-                    y = x.filter(id__gt=pk)[:1].get()
+                    liked_dog = liked_dogs.filter(id__gt=pk)[:1].get()
                 except ObjectDoesNotExist:
-                    y = x.first()
-                return y
+                    liked_dog = liked_dogs.first()
+                return liked_dog
             else:
                 return status.HTTP_404_NOT_FOUND
 
         elif response == 'disliked':
-            x = self.get_queryset().filter(
+            disliked_dogs = self.get_queryset().filter(
                 dog__status='d', age_category__in=age,
-                gender__in=gender, size__in=size)
+                gender__in=gender, size__in=size,
+                dog__user=self.request.user)
 
             # now that we have the filtered dog instances
             # based on preferences,
             # we get the one that either is next in line
             # or if there is no next then go to the first
             # one.
-            if x:
+            if disliked_dogs:
                 try:
-                    y = x.filter(id__gt=pk)[:1].get()
+                    disliked_dog = disliked_dogs.filter(
+                        id__gt=pk)[:1].get()
                 except ObjectDoesNotExist:
-                    y = x.first()
-                return y
+                    disliked_dog = disliked_dogs.first()
+                return disliked_dog
             else:
                 return status.HTTP_404_NOT_FOUND
 
         elif response == 'undecided':
-            x = self.get_queryset().filter(
+            if pk < 0:
+                any_userdogs = models.UserDog.objects.filter(
+                    user=self.request.user).exists()
+                if not any_userdogs:
+                    all_dogs = models.Dog.objects.all()
+                    for dog in all_dogs:
+                        models.UserDog.objects.create(
+                            user=self.request.user,
+                            dog=dog,
+                            status="u")
+
+            undecided_dogs = self.get_queryset().filter(
                 age_category__in=age, gender__in=gender,
-                size__in=size).exclude(dog__status__in=['l', 'd'])
+                size__in=size, dog__user=self.request.user).exclude(
+                dog__status__in=['l', 'd'])
 
             # now that we have the filtered dog instances
             # based on preferences,
             # we get the one that either is next in line
             # or if there is no next then go to the first
             # one.
-            if x:
+            if undecided_dogs:
                 try:
-                    y = x.filter(id__gt=pk)[:1].get()
+                    undecided_dog = undecided_dogs.filter(
+                        id__gt=pk)[:1].get()
                 except ObjectDoesNotExist:
-                    y = x.first()
-                return y
+                    undecided_dog = undecided_dogs.first()
+                return undecided_dog
             else:
                 return status.HTTP_404_NOT_FOUND
         else:
@@ -117,25 +134,25 @@ class RetrieveUpdateDestroyDog(generics.RetrieveUpdateDestroyAPIView):
         # gets the url parameters
         response = self.kwargs.get('decision')
         pk = self.kwargs.get('pk')
+        pk = int(pk)
 
         dog_instance = self.get_queryset().get(id=pk)
 
         # if a UserDog instance exists then update it
         # if none exists then create one
-        try:
-            x = models.UserDog.objects.get(
-                user=self.request.user, dog=dog_instance)
-            x.status = response[0]
-            x.save()
-        except ObjectDoesNotExist:
-            x = models.UserDog.objects.create(
-                user=self.request.user, dog=dog_instance, status=response[0])
+
+        my_userdog = models.UserDog.objects.get(
+            user=self.request.user, dog=dog_instance)
+        my_userdog.status = response[0]
+        my_userdog.save()
+
         dog = serializers.DogSerializer(dog_instance)
         return Response(dog.data)
 
     def delete(self, request, *args, **kwargs):
         """Delete a dog instance."""
         pk = self.kwargs.get('pk')
+        pk = int(pk)
         dog = get_object_or_404(models.Dog, id=pk)
         try:
             userdog = models.UserDog.objects.get(
@@ -159,11 +176,11 @@ class RetrieveUpdateUserPref(generics.RetrieveUpdateAPIView):
         # but if there is none we create one to be soon after
         # updated with a 'PUT'.
         try:
-            x = self.get_queryset().get(user=self.request.user)
+            my_userpref = self.get_queryset().get(user=self.request.user)
         except ObjectDoesNotExist:
-            x = models.UserPref.objects.create(
+            my_userpref = models.UserPref.objects.create(
                 user=self.request.user, age='b', gender='m', size='s')
-        return x
+        return my_userpref
 
 
 class FileView(APIView):
