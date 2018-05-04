@@ -12,12 +12,12 @@ Create a new dog instance with api/dog/create/
 Delete with  url(r'^api/dog/(?P<pk>-?\d+)/(    
 	?P<decision>liked|disliked|undecided|delete)/$'    
     
-Dog instance 'image_filename' needs to match    
-uploaded image's 'file' field.     
-  ex: 
-  Dog.image_filename = 'bulldog.jpg'
-  File.file = 'bulldog.jpg'  
-
+Dog instance 'image_filename' needs to match      
+uploaded image's 'file' field.       
+  ex:   
+  Dog.image_filename = 'bulldog.jpg'  
+  File.file = 'bulldog.jpg'    
+  
 # Pug or Ugh
 
 ## Requirements
