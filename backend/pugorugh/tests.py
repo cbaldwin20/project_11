@@ -195,9 +195,7 @@ class PughorUghViewsFile(APITestCase):
             {'user': self.user_one,
              'dog': self.dog_one,
              'status': 'd'})
-        dog = models.Dog.objects.filter(id=id)
         userdog = models.UserDog.objects.filter(id=id)
-        self.assertTrue(dog)
         self.assertTrue(userdog)
         self.assertNotEqual(response.status_code, status.HTTP_204_NO_CONTENT)
 
@@ -210,8 +208,6 @@ class PughorUghViewsFile(APITestCase):
             {'user': self.user_one,
              'dog': self.dog_one,
              'status': 'd'})
-        dog = models.Dog.objects.filter(id=id)
         userdog = models.UserDog.objects.filter(id=id)
-        self.assertFalse(dog)
         self.assertFalse(userdog)
         self.assertEqual(response.status_code, status.HTTP_204_NO_CONTENT)

@@ -31,6 +31,14 @@ class DogCreateAPIView(CreateAPIView):
     queryset = models.Dog.objects.all()
     serializer_class = serializers.DogSerializer
 
+    def perform_create(self, serializer):
+        """Create UserDog instance for new Dog instance."""
+        dog_instance = serializer.save()
+        models.UserDog.objects.create(
+            user=self.request.user,
+            dog=dog_instance,
+            status='u')
+
 
 class RetrieveUpdateDestroyDog(generics.RetrieveUpdateDestroyAPIView):
     """Can get, update, or delete a dog instance."""
@@ -162,7 +170,6 @@ class RetrieveUpdateDestroyDog(generics.RetrieveUpdateDestroyAPIView):
             userdog.delete()
         except ObjectDoesNotExist:
             pass
-        dog.delete()
         return Response(status=status.HTTP_204_NO_CONTENT)
 
 
